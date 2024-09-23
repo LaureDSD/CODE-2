@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catastro_municipio>
+	<vivendas>
+		<vivenda clasificacion_catastral="urbano" referencia_catastral="v1">
+			<nucleo_urbano>Monforte</nucleo_urbano>
+			<enderezo>
+				<rua>Reboredo</rua><num>34</num><bloque>2</bloque><escada>1</escada>
+				<planta>9</planta><porta>C</porta>
+			</enderezo>
+
+			<info_adicional>
+				<poligono>A grela</poligono>
+				<parcela>89</parcela>
+				<paraxe>Protexido</paraxe>
+			</info_adicional> 
+      </vivenda>
+
+		<vivenda clasificacion_catastral="especial" referencia_catastral="v23">
+			<nucleo_urbano>Monforte</nucleo_urbano>
+			<enderezo>
+				<rua>Reboredo</rua><num>34</num>
+				<planta>9</planta><porta>C</porta>
+			</enderezo>
+			
+		</vivenda>
+
+<vivenda clasificacion_catastral="rustico" referencia_catastral="v3">
+			<nucleo_urbano>Monforte</nucleo_urbano>
+			<enderezo>
+				<rua>Roberto Barantes</rua><num>34</num><bloque>2</bloque><escada>1</escada>
+				<planta>3</planta><porta>C</porta>
+			</enderezo>
+
+			<info_adicional>
+				<poligono>A grela</poligono>
+				<parcela>90</parcela>
+				<paraxe>Rustico protexido</paraxe>
+			</info_adicional> 
+      </vivenda>
+	</vivendas>
+	<persoas>
+		<persoa dni="a2">
+			<nome>Antonio</nome>
+			<apelidos>Luaces Conde</apelidos>
+			<enderezo>
+				<rua>Sober</rua>
+				<num>999</num>
+				<planta>1</planta>
+			</enderezo>
+			<telefono tipo_telefono="fixo">999876543</telefono>
+			<email>antonio@luaces.com</email>
+		</persoa>
+				<persoa dni="a3">
+			<nome>Luisa</nome>
+			<apelidos>Rodriguez Torres</apelidos>
+			<enderezo>
+				<rua>Sober</rua>
+				<num>1</num>
+				<planta>10</planta>
+			</enderezo>
+			<telefono tipo_telefono="mobil">999876543</telefono>
+			<email>maria@luaces.com</email>
+		</persoa>
+	</persoas>
+	
+	<propiedades>
+		<propiedade vivenda="v1" persoa="a2">
+			<cota>30%</cota>
+		</propiedade>
+		<propiedade vivenda="v1" persoa="a3">
+			<cota>70%</cota>
+		</propiedade>
+	</propiedades>
+
+
+	<habitabilidade>
+		<habita  vivenda="v1" persoa="a2" >
+				<data_entrada>23/22/33</data_entrada>
+				<data_fin>23/22/33</data_fin>
+		</habita>
+	</habitabilidade>
+</catastro_municipio>

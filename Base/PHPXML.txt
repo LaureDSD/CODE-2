@@ -1,0 +1,25 @@
+
+create DATABASE if not exists prueba;
+
+CREATE TABLE `prueba`.`informacion` (`id` INT NOT NULL AUTOINCREMENT, `xml` VARCHAR(2048) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+CREATE TABLE if not exists clientes (
+CodigoCliente BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+NombreCliente VARCHAR(50) NOT NULL , 
+ApellidoCliente VARCHAR(50) NOT NULL,
+DNI INTEGER NOT NULL,
+Direccion VARCHAR(50)
+) ENGINE = InnoDB;
+
+SELECT * FROM `informacion` WHERE 1;
+
+insert into informacion (id,xml) VALUES (1,'<empleados> <empleado numero="1"> <nombre>Juan Carlos Sarmiento</nombre> <proyecto>Sistemas de robótica inteligente</proyecto> <departamento>Sistemas</departamento> </empleado> <empleado numero="2"> <nombre> Carlos Lopetegui Almahorra</nombre> <proyecto>Sistemas de neuronas artificiales</proyecto> <departamento>redes</departamento> </empleado> <empleado numero="3"> <nombre>Francisca Vermando Sors</nombre> <proyecto>Bases de datos XML nativas</proyecto> <departamento>Sistemas de almacenamiento de datos</departamento> </empleado> </empleados>');
+
+
+SELECT * FROM `informacion`;
+
+SELECT extractvalue(xml,'/') FROM `informacion` WHERE id=1;
+
+SELECT extractvalue(xml,'/empleados/empleado/@numero') FROM `informacion` WHERE id=1;
+
+SELECT extractvalue(xml,'/empleados/empleado/nombre/text()') FROM `informacion` WHERE id=1;

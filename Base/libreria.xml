@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<libreria xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/libreria.xsd">
+  <libros>
+    <libro>
+    <!--grupo de atributos g_id_bibliografia-->
+    <!--ISBN son entre 13 y 15 dígitos del 0 al 9-->
+      <titulo ISBN="9788646202146" categoria="Juvenil" encuadernacion="Tapa_blanda" resumen="si">Juegos del hambre 3: Sinsajo</titulo>
+      <autor> <!--GRUPO elementos g_datos_personales-->
+        <nombre>Suzanne Collins</nombre>
+        <telefono>645-255593 </telefono><!--tipo para telefono con el patrón que ves-->
+      </autor> 
+      <paginas>432</paginas><!--numero del 1 al 1000-->
+      <editorial>MOLINO</editorial>
+      <fecha>2012-11-09</fecha><!--formato fecha-->
+      <lengua>CASTELLANO</lengua><!--valores posibles CASTELLANO, INGLES, GALLEGO
+      **con una lista, no con el operador | -->
+      <precio> <!--crea un tipo para el precio-->
+        <importe moneda="euro">16</importe>
+        <importe moneda="dolar">21.97</importe>
+        <importe moneda="libra">13.35</importe>  
+      </precio>
+      <imagen extension="jpg">imagenes/sinsajo</imagen>
+    </libro>
+  </libros>
+  <clientes>
+    <cliente codigo_cli="c1">
+      <nombre>Andres Vidueira Lamas</nombre>
+      <telefono>666-252513</telefono>
+    </cliente>
+  </clientes>
+  <prestamos>
+	  <prestamo cliente="c1" resumen="c1" compro="si">
+		<fecha_entrega>2013-12-12</fecha_entrega>
+		<fecha_devolucion>2013-12-13</fecha_devolucion>
+	  </prestamo>
+  </prestamos>
+  <comic ISBN="97885554272046" categoria="Juvenil" encuadernacion="Tapa blanda" resumen="si">
+    <titulo>Los corderos perdidos</titulo>
+    <autor> 
+      <nombre>Albert Corberó</nombre>
+      <telefono>981-4255593 </telefono>
+    </autor> 
+    <paginas>99</paginas><!--numero del 1 al 100-->
+    <editorial>MOLINO</editorial>
+    <precio> 
+      <importe moneda="euro">8</importe>
+    </precio>
+  </comic>
+</libreria>

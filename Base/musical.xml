@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<musical>	
+	<obra codigo="12" formato="disco de vinilo">
+		<tipo>album</tipo>		
+		<titulo>Unorthodox Jukebox</titulo>
+		<artista>Bruno Mars</artista>
+		<duracion tiempo="minutos">55</duracion>
+		<precio moneda="euros">22.95</precio>
+	</obra>
+	<obra codigo="123" formato="disco de vinilo">
+		<tipo>album</tipo>
+		<titulo>Unorthodox Jukebox</titulo>
+		<artista>Bruno Mars</artista>
+		<duracion tiempo="minutos">75</duracion>
+		<precio moneda="euros">20.95</precio>
+	</obra>
+	<obra codigo="17" formato="disco compacto">
+		<artista>Justin Timberlake</artista>
+		<tipo>album recopilatorio</tipo>
+		<titulo>The 20/20 Experience</titulo>
+		<duracion tiempo="horas">1.45</duracion>
+		<precio moneda="libras">16.00</precio>
+	</obra>
+	<obra codigo="127" formato="cd">
+		<artista>Justin Timberlake</artista>
+		<tipo>album</tipo>
+		<titulo>The 20/20 Experience</titulo>
+		<duracion tiempo="horas">1.45</duracion>
+		<precio moneda="euros">16.00</precio>
+	</obra>
+	<obra codigo="179" formato="disco compacto">
+		<artista>Justin Timberlake</artista>
+		<tipo>album</tipo>
+		<titulo>The 20/20 Experience II</titulo>
+	</obra>
+	<artistas>
+		<artista>
+			<nombre>Bruno Mars</nombre>
+			<nacionalidad>Estados Unidos</nacionalidad>
+			<profesion>Cantante</profesion>
+		</artista>
+		<artista>
+			<nombre id="233">Justin Timberlake</nombre>
+			<nacionalidad>Estados Unidos</nacionalidad>
+			<profesion>Compositor</profesion>
+			<profesion>Actor</profesion>
+			<profesion>Cantante</profesion>
+		</artista>
+		<artista>
+			<nombre id="23366">Gian Francesco Malipiero </nombre>
+			<nacionalidad>Italia</nacionalidad>
+			<profesion>Compositor</profesion>
+		</artista>
+		<artista>
+			<nombre id="1133">Gian Francesco Lo </nombre>
+			<nacionalidad>Italia</nacionalidad>
+			<profesion>Compositor</profesion>
+		</artista>
+	</artistas>
+</musical>

@@ -1,0 +1,9 @@
+INSERT INTO documentos VALUES
+(' <book>
+<title>O lapis do carpinteiro</title>
+<author>
+<initial>MR</initial>
+<surname>Rivas</surname>
+</author>
+</book> ');
+
