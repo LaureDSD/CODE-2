@@ -1,0 +1,65 @@
+<!ELEMENT edificio (enderezo, dataConstrucion, material?)>
+<!ELEMENT enderezo (rua, numero, poboacion, provincia, codigoPostal)>
+<!ELEMENT rua (#PCDATA)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT poboacion (#PCDATA)>
+<!ELEMENT provincia (#PCDATA)>
+<!ELEMENT codigoPostal (#PCDATA)>
+<!ELEMENT dataConstrucion EMPTY>
+<!ATTLIST dataConstrucion
+mes CDATA #REQUIRED
+ano CDATA #REQUIRED>
+<!ELEMENT material (#PCDATA)>
+<!ATTLIST edificio
+valor CDATA #IMPLIED
+alquiler (verdadeiro|falso) #REQUIRED>
+
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE reservas SYSTEM "tarea5b.dtd">
+
+<edificio valor="0" alquiler="Verdadeiro">
+    <enderezo>
+        <rua>Ponzano</rua>
+        <numero>66</numero>
+        <poboacion>Madrid</poboacion>
+        <provincia>Madrid</provincia>
+        <codigopostal>28003</codigopostal>
+    </enderezo>
+    <dataConstruccion  mes="02" ano="1989"></dataConstruccion>
+    <material>formigon</material>
+</edificio>
+
+
+
+
+<!ELEMENT reservas (reserva*)>
+    <!ATTLIST reservas ano CDATA #REQUIRED>
+<!ELEMENT reserva (data,informacion?,(ClientePers | ClienteEmpre))>
+    <!ATTLIST reserva 
+        local (Polidepo | LocalSocial) #REQUIRED>
+        bonificacion CDATA #IMPLIED>
+<!ELEMENT data EMPTY>
+    <!ATTLIST data 
+        mes CDATA #REQUIRED>
+        dia CDATA #REQUIRED>
+        data horario (mana | tarde | noite) "tarde" #REQUIRED>
+<!ELEMENT informacionevento (#PCDATA)
+<!ELEMENT ClientePers (#PCDATA)
+<!ELEMENT ClienteEmpre (#PCDATA)
+
+
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE reservas SYSTEM "tarea5b.dtd">
+
+
+    <reservas ano="0001">
+        <reserva local="LocalSocial" bonificacion="5">
+            <data mes="01" dia="01" horario="tarde"></data>
+            <informacionevento>Nada</informacionevento>
+            <clienteEmpre>Casa Pepe</clienteEmpre>
+        </reserva>
+        <reserva local="polideportivo">
+            <data mes="02" dia="02" horario="tarde"></data>
+            <clientePers>Pepe</clientePers>
+        </reserva>
+    </reservas>

@@ -1,0 +1,219 @@
+a)Tarefa6a
+
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<reservas>
+<reserva cliente="CLI1" tipo="AD" habitación="Dobre">
+    <data_inicio ano="2013" mes="Febreiro" día="5" />
+    <data_fin ano="2013" mes="Febreiro" día="9" />
+    <observacións>Chegan sobre as 23:30</observacións>
+</reserva>
+<reserva cliente="CLI2" tipo="MP" habitación="Individual">
+    <data_inicio ano="2013" mes="Febreiro" día="7" />
+    <data_fin ano="2013" mes="Febreiro" día="15" />
+    <observacións>Saída as 16:00</observacións>
+</reserva>
+<reserva cliente="CLI1" tipo="PC" habitación="Dobre">
+    <data_inicio ano="2013" mes="Febreiro" día="18" />
+    <data_fin ano="2013" mes="Febreiro" día="23" />
+</reserva>
+<cliente id="CLI1">
+    <nome>Eva</nome>
+    <apelidos>Sobral García</apelidos>
+    <mobil>688998899</mobil>
+    <correo>eva.sobral@meucorreo.com</correo>
+</cliente>
+<cliente id="CLI2">
+    <nome>Xan</nome>
+    <apelidos>López Paz</apelidos>
+    <mobil>677778899</mobil>
+</cliente>
+</reservas>
+
+
+
+<!ELEMENT reservas (reserva*, cliente*)>
+    <!ELEMENT reserva (data_inicio , data_fin , observacions)>
+     <!ATTLIST reserva 
+        cliente IDREF #REQUIRED>
+        tipo (SA|AD|MP|PC) #REQUIRED>
+        habitacion (Dobre | Individual) #REQUIRED>
+    <!ELEMENT data_inicio #IMPLIED>
+    <!ELEMENT data_fin #IMPLIED>
+
+        <!ENTITY % data
+            ano  CDATA #REQUIRED>
+            mes (enero,febrero,marzo,abril,mayo,junio,julio) CDATA #REQUIRED>
+            dia CDATA #REQUIRED>
+
+        <!ATTLIST data_inicio %data;>
+        <!ATTLIST data_fin %data;>
+
+    <!ELEMENT observacions (#PCDATA)>
+
+    <!ELEMENT cliente (nome,apellidos,movil,correo?) #IMPLIED>
+        <!ATTLIST cliente id ID #REQUIRED>
+        <!ELEMENT nome (#PCDATA)>
+        <!ELEMENT apelidos (#PCDATA)>
+        <!ELEMENT mobil (#PCDATA)>
+        <!ELEMENT correo (#PCDATA)>
+
+
+
+
+
+
+
+
+
+
+b)Tarefa6b
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT Hardware (Maquina*)>
+<!ELEMENT Maquina (Info, Config, Notas?)>
+<!ATTTLIST Maquina
+        nome ID #REQUIRED>
+        fabricante IDREF #IMPLIED>
+        Espazo IDREF #IMPLIED>
+
+<!ELEMENT Info (Tipo, Procesador?, Memoria?, Disco*,(Lectora | Gravadora)?)>
+<!ELEMENT Tipo (#PCDATA)>
+
+<!ELEMENT Procesador (#PCDATA)
+<!ATTLIST Procesador
+    Marca (Intel | AMD) #REQUIRED>
+    NumNucleos CDATA "1">
+    Velocidade CDATA #IMPLIED>
+
+<!ELEMENT Memoria (#PCDATA)>
+    <!ATTLIST Memoria
+        Tecnoloxía (DDR | DDR2 | DDR3) #IMPLIED>
+
+<!ELEMENT Disco EMPTY>
+!ATTLIST Disco
+    Tecnoloxía (ATA | SATA | SCSI | SSD) #IMPLIED
+    Capacidade CDATA #REQUIRED>
+
+<!ELEMENT Lectora (#PCDATA)>
+    <!ENTITY % Unidade_optica
+        "Tipo (CD | DVD | BD) #REQUIRED
+        Velocidade CDATA #IMPLIED>
+    <!ATTLIST Lectora %Unidade_optica; >
+
+<!ELEMENT Gravadora (#PCDATA)>
+    <!ATTLIST Gravadora %Unidade_optica; >
+
+<!ELEMENT Config (Role*, OS?, IP*, Gateway?)>
+<!ELEMENT Role (#PCDATA)>
+<!ELEMENT OS (#PCDATA)>
+<!ELEMENT IP (#PCDATA)>
+<!ELEMENT Gateway (#PCDATA)>
+<!ELEMENT Notas (#PCDATA)>
+
+<!ELEMENT Fabricante (nome, web, correo)>
+     <!ATTLIST Fabricante
+        nome ID #REQUIRED>
+    <!ELEMENT web (#PCDATA)>
+    <!ELEMENT mail (#PCDATA)>
+
+<!ELEMENT espazo (ubicacion)>
+    <!ATTLIST espazo 
+        nome ID #REQUIRED
+        tipo (aula | sala | departamento) #IMPLIED
+<!ELEMENT ubicacion (#PCDATA)>
+
+<maquina nome="IMPO1" Fabricante="Empson">
+    <info>
+        <tipo>Impresora Epson</tipo>
+    </info>
+    
+    <fabricante nome="Epson">
+        <web>ww.epson.com</web>
+        <mail></mail>
+    </fabricante>
+
+</maquina>
+        
+
+
+
+
+c)Tarefa6c     
+        
+<!ENTITY %libros "INCLUDE">
+<!ENTITY %artigos "IGNORE">
+
+<!DOCTYPE material [
+
+<![%libros;
+    [
+    <ELEMENT material (libro+)>
+    <ELEMENT libro (titulo,editorial,autor*,ano)>
+    <ATTLIST libro ISBN CDATA #REQUIRED>
+    <ELEMENT titulo (#PCDATA)>
+    <ELEMENT editorial (#PCDATA)>
+    <ELEMENT autor (#PCDATA)>
+    <ELEMENT ano (#PCDATA)>
+    ]
+]>     
+
+<![%artigos];
+    [
+    <ELEMENT material(artigo*)>
+    <ELEMENT artigo(titulo.revista)>
+    <ELEMENT titulo (#PCDATA)>
+    <ELEMENT revista(nome,paxina)>
+    <ELEMENT nome(#PCDATA)>
+    <ELEMENT paxina (#PCDATA)>
+    <ATTLIST revista numero CDATA #REQUIRED>
+    ]]>
+
+]>
+
+        
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<material>
+
+<libro ISBN="X9-8998">
+
+<titulo>Inverno na Pereira</titulo>
+
+<editorial>Toxo verde</editorial>
+
+<autor>Xurxo Cancelas Brión</autor>
+
+<ano>2008</ano>
+
+</libro>
+
+</material>
+        
+        
+        
+        
+
+    
+<?xml version="1.0" encoding="UTF-8"?>
+
+<material>
+
+<artigo>
+
+<titulo>O carballo</titulo>
+
+<revista numero="32">
+
+<nome>Natureza verde</nome>
+
+<paxina>4</paxina>
+
+</revista>
+
+</artigo>
+
+</material>

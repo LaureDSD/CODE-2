@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE libreria [
+
+<!ELEMENT libreria (libros, clientes, prestamos_ventas)>
+
+<!ELEMENT libros (libro)>
+
+<!ELEMENT libro (titulo, nomeautor+, paginas, editorial, data, imaxe,isbn , prezo)>
+    <!ATTLIST libro resumen (si/no) 'si'>
+    <!ATTLIST libro tapa (dura/blanda) #required>
+    <!ATTLIST libro lingua CDATA>
+    <!ATTLIST libro ISBN CDATA>
+    <!ATTLIST libro categoria CDATA #required>
+    <!ELEMENT titulo (#PCDATA)>
+    <!ELEMENT nomeautor (#PCDATA)>
+    <!ELEMENT paginas (#PCDATA)>
+    <!ELEMENT editorial (#PCDATA)>
+    <!ELEMENT data (#PCDATA)>
+    <!ELEMENT imaxe (#PCDATA)>
+        <!ATTLIST imagen formato (JPG|PNG|GIF) CDATA #IMPLIED>
+    <!ELEMENT prezo (#PCDATA)>
+        <!ATTLIST fianza moneda (euro|dolar|libra) #REQUIRED>
+
+<!ELEMENT clientes (cliente)>
+<!ELEMENT cliente (nome,telefono)>
+    <!ATTLIST cliente codigo ID #REQUIRED>
+    <!ELEMENT nome (#PCDATA)>
+    <!ELEMENT telefono (#PCDATA)>
+
+<!ELEMENT prestamos(prestamo+)>
+<!ELEMENT prestamo (datadevolucion, dataprestamo,fianza)>
+        <!ATTLIST prestamo tipo (prestamo/venta) #REQUIRED>
+        <!ATTLIST prestamo compra (si/no) #REQUIRED>
+        <!ELEMENT dataprestamo (#PCDATA)>
+        <!ELEMENT datadevolucion (#PCDATA)>
+        <!ELEMENT fianza (#PCDATA)>
+            <!ATTLIST fianza moneda (euro|dolar|libra) #REQUIRED>
+]>
+
+
+<libreria>
+    <libros>
+        <libro lingua="Castellano" ISBN="9788427202146" resumen="si" categoria="xuvenil" tapa="blana">
+            <titulo>Juegos del hambre 3:sin sajo</titulo>
+            <autor>Suzanne Colins</autor>
+            <paginas>432</paginas>
+            <editorial>MOLINO</editorial>
+            <data>2012-11-09</data>
+            <imagen ext="jpg">imagenes/sinsajo.jpg</imagen>
+            <precios>
+                <precio moneda="euro">16</precio>
+                <precio moneda="dolare">21,97</precio>
+                <precio moneda="libra">13,35</precio>
+            </precios>
+        </libro>
+    </libros>
+    
+    <clientes>
+        <cliente codigo="c1">
+            <nome>Andres Vidueira Lamas</nome>
+            <telefono>666.25.25.13</telefono>
+        </cliente>
+    </clientes>
+    
+    <prestamos_ventas>
+        <prestamo tipo="venta" compra="si">
+            <dataprestamo>2013-01-16</dataprestamo>
+            <datadevolucion>2013-01-18</datadevolucion>
+            <libro ISBN=""></libro>
+            <cliente></cliente>
+            <fianza moneda="euro">5</fianza>
+        </prestamo>
+    </prestamos_ventas>
+</libreria>

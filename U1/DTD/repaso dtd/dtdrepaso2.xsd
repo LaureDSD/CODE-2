@@ -1,0 +1,38 @@
+<?xml version="1.1" encoding="utf-8"?>
+<centro xmlns="http://www.centro.com/espazosdenomes/ciclo/"
+xmlns:md="http://www.modulo.com/espazosdenomes/modulo/"
+xmlns:al="http://www.alumno.com/espazosdenomes/alumno/">
+    
+<ciclo id="ASIR" grao="CS">
+<md:módulo id="MP0371">
+<md:nome>Fundamentos hardware</md:nome>
+<md:horas>107</md:horas>
+</md:módulo>   
+<md:módulo id="MP0370">
+<md:nome>Planificación e administración de redes</md:nome>
+<md:horas>213</md:horas>
+</md:módulo>
+<al:alumno>
+<al:nome>Xoan</al:nome>
+<al:apelidos>Cancedo da Foz</al:apelidos>
+<al:ciclo>ASIR ordinario</al:ciclo>
+<al:curso>1º</al:curso>
+<al:datanacemento>06/11/1991</al:datanacemento>
+<al:nota>Xa fixo outro ciclo</al:nota>
+<al:módulo id="MP0370" nota="0"></al:módulo>
+<al:módulo id="MP0371" nota="0"></al:módulo>
+</al:alumno>
+<al:alumno>
+<al:nome>Xoancho</al:nome>
+<al:apelidos>Can da Fozes</al:apelidos>
+<al:ciclo>ASIR ordinario</al:ciclo>
+<al:curso>1º</al:curso>
+<al:datanacemento>06/11/1991</al:datanacemento>
+<al:nota>Xa fixo outro ciclo</al:nota>
+<al:módulo id="MP0370" nota="0"></al:módulo>
+<al:módulo id="MP0371" nota="0"></al:módulo>
+</al:alumno>
+</ciclo>
+<ciclo id="DAW" grao="CS">
+</ciclo >
+</centro>

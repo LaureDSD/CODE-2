@@ -1,0 +1,77 @@
+<xg:garderia xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:xg="http://www.concello.es/garderias"
+xsi:schemaLocation="http://www.concello.es/garderias esquemaGarderia.xsd">
+
+/* USABLE */
+    <!-- "&" e "<" -->
+    "&#38;" e "&#60;" (en hexadecimal serían "&#x26;" e "&#x3C;"
+    "&amp;" e "&lt;".
+
+    "&amp;" <!-- para facer referencia ao carácter "&".-->
+ "&lt;" <!-- para facer referencia ao carácter "<".-->
+ "&gt;"  <!-- para facer referencia ao carácter ">".-->
+ "&quot;" <!-- para facer referencia á comiña dobre """.-->
+ "&apos;" <!-- para facer referencia á comiña simple "'".-->
+    
+    "<![CDATA[" e péchase con "]]>".
+    
+    <sorteo nombre=" " xml:space="preserve" xml:lang="en"> 
+        texto
+        manteniendo
+        <![CDATA[" < & "]]>
+        cambios
+    </sorteo>
+
+
+/* CREAR XML */
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sorteo_reyes SYSTEM "http://www.hibernate.org">
+
+/* AL DTD */
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no" ?>
+<!DOCTYPE sorteo_reyes SYSTEM "dtdrepaso.dtd">
+
+/* AL XSD */
+<?xml version="1.0" encoding="UTF-8"?>
+<nombre xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ruta/a/tu/archivo.xsd"></nombre>
+
+<sorteo_reyes>
+  <sorteos>
+    <sorteo nombre="Sorteo Reyes" fecha="2014-01-06"></sorteo>
+    <sorteo nombre="Sorteo Reyes" fecha="2013-01-06"></sorteo>    
+  </sorteos>
+
+  <administraciones>
+    <administracion codigo="c125">
+      <nombre>Loterias Palomita</nombre>
+      <direccion>
+          <calle>Roberto de la Iglesia</calle>      
+          <numero>225</numero>
+          <codigo_postal>12587</codigo_postal>
+      </direccion>
+    </administracion>
+    <administracion codigo="c225">
+      <nombre>La favorita</nombre>
+      <direccion>
+          <calle>Cuatro Caminos</calle>      
+          <numero>45</numero>
+          <codigo_postal>17003</codigo_postal>
+      </direccion>
+    </administracion>
+  </administraciones>
+
+  <premios>
+    <premio banco="b0369" vendido="c225" numero="s25879" importe="200.000" moneda="euros">Primero</premio>
+    <premio vendido="c225" numero="s10875" importe="100.000" moneda="dolares">Segundo</premio>
+    <premio vendido="c225" numero="c00125" importe="10.000">Consolacion</premio>
+  </premios>
+
+  <entidades_bancarias>
+    <entidad codigo="b0369" sucursal="0182" cobrado="s25879">
+      <nombre>Banco Bilbao Vizcaya Argentaria</nombre>
+    </entidad>
+    <entidad codigo="c0082" sucursal="1205" cobrado="s25879">
+      <nombre>Nova Galicia Banco</nombre>
+    </entidad>
+  </entidades_bancarias>
+</sorteo_reyes>

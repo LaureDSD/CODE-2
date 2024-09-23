@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+/* BASICO */
+
+
+<!DOCTYPE sorteoreyes [
+<!ELEMENT sorteoreyes (sorteos,administraciones,premios,entidadesbancarias)>
+
+<!ELEMENT sorteos (sorteo)>
+<!ELEMENT sorteo (#PCDATA)>
+<!ATTLIST sorteo 
+        nombre CDATA #FIXED "Sorteo reyes"
+        /* valor fijo indicado en todo el xml */
+        fecha NMTOKEN #REQUIRED
+        /* caracteres alfanuméricos, guiones, guiones bajos y puntos */
+>
+
+<!ELEMENT administraciones (administracion)>
+<!ELEMENT administracion (nombre,direccion)>
+<!ATTLIST administracion 
+        codigo ID #REQUIRED
+>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT direccion (calle,numero,codigopostal)>
+<!ELEMENT calle (#PCDATA)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT codigopostal (#PCDATA)>
+
+
+<!ELEMENT premios (premio+)>
+<!ELEMENT premio (#PCDATA) #REQUIRED>
+<!ATTLIST premio 
+        banco IDREF #IMPLIED
+        vendido IDREF #REQUIRED
+        numero ID #REQUIRED
+        importe CDATA #REQUIRED
+        moneda (euros|dolares) 'euros' #REQUIRED
+>
+
+<!ELEMENT entidadesbancarias (entidad+)>
+<!ELEMENT entidad (nombre)>
+<!ATTLIST entidad 
+        codigo ID #REQUIRED
+        sucursal CDATA #REQUIRED
+        cobrado IDREFS #REQUIRED
+        /* Permite mas de una referencia separada por espacio */
+>
+<!ELEMENT nombre (#PCDATA)>
+
+
+
+
+
+
+
+
+/* ENTITY */
+
+<!ENTITY %data 
+        ano CDATA #REQUIRED
+        mes (Enero|-to->|Diciembre) #REQUIRED
+        dia CDATA #REQUIRED
+>
+
+<!ELEMENT datainicio EMPTY>
+<!ATTLIST datainicio %data>
+
+<!ELEMENT datafin EMPTY>
+<!ATTLIST datafin %data>
+
+
+
+
+
+
+/* ENTITY INCLUDES */
+
+!ENTITY %libros "INCLUDE">
+<!ENTITY %artigos "IGNORE">
+
+<!DOCTYPE material [
+
+<![%libros];
+    [
+    <ELEMENT material (libro+)>
+    <ELEMENT libro (titulo,editorial,autor*,ano)>
+    <ATTLIST libro ISBN CDATA #REQUIRED>
+    <ELEMENT titulo (#PCDATA)>
+    <ELEMENT editorial (#PCDATA)>
+    <ELEMENT autor (#PCDATA)>
+    <ELEMENT ano (#PCDATA)>
+    ]
+]>     
+
+<![%artigos];
+    [
+    <ELEMENT material(artigo*)>
+    <ELEMENT artigo(titulo.revista)>
+    <ELEMENT titulo (#PCDATA)>
+    <ELEMENT revista(nome,paxina)>
+    <ELEMENT nome(#PCDATA)>
+    <ELEMENT paxina (#PCDATA)>
+    <ATTLIST revista numero CDATA #REQUIRED>
+    ]]>
+
+]>
+
+
+
+/* MIXED */
+
+<!DOCTYPE mensaxre [
+<!ELEMENT mensaxe(de , para+ , asunto , adxunto* , corpo?)>
+    <!ELEMENT de (#PCDATA)>
+    <!ELEMENT para (#PCDATA)>
+    <!ELEMENT asunto (#PCDATA)>
+    <!ELEMENT adxunto (#MIXED)>
+    <!ELEMENT corpo (#PCDATA)>
+]
+
+
+/* NOTACIONES */
+<!NOTATION nombre-de-la-notación PUBLIC "identificador-público">
+/* Funcionan como aclaradores de archivos */
+
+
+
+/* NAMESPACES DTD */
+
+<!ELEMENT administraciones (administracion)>
+<!ELEMENT administracion (nombre,direccion)>
+<!ATTLIST administracion 
+        codigo ID #REQUIRED
+>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT direccion (calle,numero,codigopostal)>
+<!ELEMENT calle (#PCDATA)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT codigopostal (#PCDATA)>

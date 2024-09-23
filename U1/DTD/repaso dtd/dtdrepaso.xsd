@@ -1,0 +1,294 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace=http://www.concello.es/garderias
+elementFormDefault="qualified">
+
+
+    
+    
+    
+    /* USABLE */
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  targetNamespace="http://www.ejemplo.com/namespace"
+           
+           xmlns="http://www.ejemplo.com/namespace"
+           elementFormDefault="qualified">
+    
+</xs:schema>  
+/* BASE */
+
+
+<xs:element name="duracion" type="xs:unsignedShort" minOccurs="0"/>
+<xs:element name="X" type="tipoX" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="mes" type="tipomes" use="required"/>/* simple enum meses */
+<xs:element name="peso" type="xs:decimal"/>
+<xs:element name="altura" type="xs:decimal"/>
+<xs:element name="vacunas" type="xs:boolean"/>
+<xs:element name="idade" type="xs:unsignedByte" nillable="true"/>
+<xs:element ref="contidos"/>
+
+
+<xs:attribute name="ano" type="xs:gYear" use="required" />
+<xs:attribute name="fecha" type="xs:date" use="required" />
+<xs:attribute name="opcional" type="xs:string" use="optional" default="Si"/>
+
+/* ALL */
+/* Solo una vez cada, da igual el orden */
+<xs:element name="X">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="X" type="tipoX" />
+            </xs:all>
+                <xs:attribute name="X" type="tipoX"/>
+        </xs:complexType>
+    </xs:element>
+
+/* SEQUENCE */
+
+    <xs:element name="X">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="X" type="tipoX" />
+            </xs:sequence>
+                <xs:attribute name="X" type="tipoX"/>
+        </xs:complexType>
+    </xs:element>
+
+/* CHOICE */
+
+    <xs:element name="X">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:choice>
+                    <xs:element name="X" type="tipoX"/>
+                </xs:choice>
+                <xs:element name="X" type="tipoX" />
+            </xs:sequence>
+                <xs:attribute name="X" type="tipoX"/>
+        </xs:complexType>
+    </xs:element>
+
+/* KEY */
+
+        <xs:key name="nombreUnico">
+            <xs:selector xpath="referencia"/>
+            <xs:field xpath="@codigo"/>
+        </xs:key>
+
+        <xs:keyref name="descripcion" refer="nommbreUnico">
+            <xs:selector xpath="uso"/>
+            <xs:field xpath="referencia"/>
+        </xs:keyref>
+
+/* ELEGROUP */
+
+    <xs:group ref="X"/>
+
+    <xs:group name="X">
+        <xs:sequence>
+            <xs:element name="X" type="tipoX"/>
+        </xs:sequence>
+    </xs:group>
+
+
+/* ATTGROUP */
+
+    <xs:attributeGroup ref="X"/>
+
+    <xs:attributeGroup name="X">
+        <xs:attribute name="X" type="xs:X" use="required" />
+    </xs:attributeGroup>
+
+
+/* SIMPLE */
+    <xs:simpleType name="X">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([0-9]{9} ){0,4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+            /* OPCIONES STRINGS */
+            <xs:Length value="50"/>
+            <xs:maxLength value="50"/>
+            <xs:minLength value="50"/>
+            /* Quita espacios
+            bordes+sobrantes | solo 1 medio | mantiene
+            <xs:whiteSpace value="collapse|replace|preserve" />
+            <xs:pattern value="[A-Z]{2}-[0-9]{4,5}"/>
+            <xs:pattern value="[AEIOU][^AEIOU]-[A-Z][0-9][0-9]?"/>
+            <xs:pattern value="([0-9]{9} ){0,4}"/>
+            <xs:pattern value="[P|M][3-7]{2}(-[0-9]{3})?"/>
+            <xs:pattern value="\d{3,4}[A-E]\d{3}"/>
+            <xs:pattern value="[A-ZÁÉÍÓÚ]([\sA-Za-áéíóúñ])+" />
+            <xs:pattern value="(19|20)[0-9][0-9]"/>
+            <xs:pattern value="^[aA-Zz1-9]*-*[0-9]*[^x]*$"/>
+            /*Correo*/
+            <xs:pattern value="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"/>
+            /* DD/MM//AAAA */
+            <xs:pattern value="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}"/>
+            /* Numero decimales */
+            <xs:pattern value="[0-9]+(\.[0-9]+)?"/>
+            /* Contrasena */
+            <xs:pattern value="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}"/>
+            /*Nume telefono*/
+            <xs:pattern value="\+?[0-9]{1,3}-?[0-9]{3,14}"/>
+            
+
+    <xs:simpleType name="X">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="X"/>
+            <xs:enumeration value="X"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+/* NUMERICOS */
+    /*  unsigned es no negativos */
+    <xs:simpleType name="tiponumero">
+        <xs:restriction base="xs:unsignedShort">
+            <xs:maxInclusive value="2000"/>
+        </xs:restriction>
+    </xs:simpleType>
+        
+    <xs:simpleType name="tipovalor">
+        <xs:restriction base="xs:unsignedByte|Short|Decimal">
+            <xs.fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+
+/*VALORES Y LIMITRADORES 
+xs:integer,byte,short:
+
+minInclusive: Especifica el valor mínimo permitido.
+maxInclusive: Especifica el valor máximo permitido.
+minExclusive: Especifica el valor mínimo permitido, excluyendo este valor.
+maxExclusive: Especifica el valor máximo permitido, excluyendo este valor.
+
+xs:decimal:
+
+fractionDigits: Limita el número de dígitos decimales permitidos.
+totalDigits: Limita el número total de dígitos permitidos.
+Ademas de los de xs:integer.
+
+
+xs:date, xs:time, xs:dateTime:
+
+Igual que xs:integer
+ 
+*/
+
+
+
+/* UNION DE VALORES */
+<xs:simpleType name="tipoNota">
+<xs:union>
+    <xs:simpleType>
+        <xs:restriction base="xs:intege">
+            <xs:maxInclusive value="1"/>
+            <xs:minInclusive value="10"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="NP"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:union>
+</xs:simpleType>
+
+
+/* LIST DE ESPACIOS EN BLANCO */
+
+<xs:simpleType name="lista">
+<xs:list itemType="nota"/>
+</xs:simpleType>
+
+/* PATTERN EXTRAS */
+
+
+^ Coincidencia ao principio da cadea 
+$ Coincidencia ao final da cadea final$ 
+* O caracter que o precede pode aparecer 0, 1 ou máis veces
++ O carácter que o precede debe aparecer polo menos una vez(1 ou máis veces) 
+? O carácter que o precede pode aparecer como moito unha vez(0 ou 1 vez)
+[...] Calquera caracter dentro dos paréntesis
+[ - ] Indica un rango de caracteres
+[^...] Calquera caracter menos os que están entre paréntesis
+[^ - ] Calquera caracter menos os que estean nese rango
+{n} O carácter que o precede debe aparecer exactamente n veces
+{n,} O carácter que o precede debe aparecer n veces ou máis veces
+{n,m} O carácter que o precede debe aparecer como mínimo n e como máximo m veces
+(...) Podemos agrupar con paréntese
+| Unha barra vertical separa alternativas
+\d Calquera díxito ( é equivalente a [0-9])
+\D Calquera non díxito
+\w Calquera letra ou díxito
+\W Calquera caracter diferente de letra ou díxito
+. Calquera caracter salvo salto de liña
+\n Salto de liña
+\s Caracter en branco, tabulador ou salto de liña
+
+
+/* VALORES DE TYPO */
+
+xs:string Calquera cadea de caracteres alfanumérica
+
+xs:normalizedString Calquera cadea de carácteres alfanumérica Os caracteres de nova liña, tabulador e retorno de carro son convertidos a espazos en branco antes do procesamento do esquema.
+
+Xs:token Calquera cadea de caracteres alfanumérica Os espazos en branco adxacentes son comprimidos a un único espazo en branco, e os espazos en
+branco de diante e detrás son eliminados
+
+xs:anyURI http://www.example.com
+
+Números xs:byte 125, -2
+xs:unsignedByte 0, 45
+xs:short -1, 12534
+xs:unsignedShort 0, 12534
+xs:integer -1, 126789675
+xs:unsignedInt 0, 126789675
+xs:positiveInteger 1, 12345 Maior que 0 (>0)
+
+
+xs:nonPositiveInteger 0, -1, -12345
+xs:negativeInteger -1, -126789
+xs:nonNegariveInteger 0, 1, 126789
+xs:long -1, 12678967541111
+xs:unsignedLong 0, 12678967541111
+xs:decimal -1.23, 0, 123.4
+xs:float -1E4, 12.78E-2
+xs:double -1E4, 12.78E-2
+
+xs:dateTime 2010-12-31T13:20:00
+xs:date 2012-12-31 formato “AAAA-MM-DD”
+xs:time 13:20:00 formato “hh:mm:ss”
+xs:gDay - - -31 O día 31
+xs:gMonth - -05- - O mes de maio
+xs:gYear 2013
+xs:gMonthDay - -04-18 Cada 18 de abril
+xs:gYearMonth 2013-02
+
+Lóxicos xs:boolean true, false 1, 0
+
+Varios xs:language ES, EN, FR especifica un idioma, no formato de dous caracteres
+establecido pola norma ISO639.
+
+xs:NMTOKEN diaSemana é unha cadea de caracteres composta por letras,
+números, puntos, dous puntos, guións e suliñados.
+Non pode ter espazos.
+
+xs:NMTOKENS Nome completo é unha cadea de caracteres composta por letras,
+números, puntos, dous puntos, guións e suliñados..
+Pode conter espazos.
+
+
+
+
+
+
+
+
+
+
+

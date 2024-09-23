@@ -1,0 +1,173 @@
+
+<reservas>
+<reserva cliente="CLI1" tipo="AD" habitación="Dobre">
+    <data_inicio ano="2013" mes="Febreiro" día="5" />
+    <data_fin ano="2013" mes="Febreiro" día="9" />
+    <observacións>Chegan sobre as 23:30</observacións>
+</reserva>
+<reserva cliente="CLI2" tipo="MP" habitación="Individual">
+    <data_inicio ano="2013" mes="Febreiro" día="7" />
+    <data_fin ano="2013" mes="Febreiro" día="15" />
+    <observacións>Saída as 16:00</observacións>
+</reserva>
+<reserva cliente="CLI1" tipo="PC" habitación="Dobre">
+    <data_inicio ano="2013" mes="Febreiro" día="18" />
+    <data_fin ano="2013" mes="Febreiro" día="23" />
+</reserva>
+<cliente id="CLI1">
+    <nome>Eva</nome>
+    <apelidos>Sobral García</apelidos>
+    <mobil>688998899</mobil>
+    <correo>eva.sobral@meucorreo.com</correo>
+</cliente>
+<cliente id="CLI2">
+    <nome>Xan</nome>
+    <apelidos>López Paz</apelidos>
+    <mobil>677778899</mobil>
+</cliente>
+</reservas>
+
+
+/* dtd */
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE reseras [
+
+<!ELEMENT reservas (reserva*,cliente*)>
+
+<!ELEMENT reserva (datainicio,datafin,observacions?)>
+
+<!ATTLIST reserva 
+        cliente IDREF #REQUIRED
+        tipo (SA|AD|MP|PC) #REQUIRED
+        habitacion (Dobre|Individual) #REQUIRED
+>
+
+<!ENTITY %data 
+        ano CDATA #REQUIRED
+        mes (Enero|-to->|Diciembre) #REQUIRED
+        dia CDATA #REQUIRED
+>
+
+<!ELEMENT datainicio EMPTY>
+<!ATTLIST datainicio %data>
+
+<!ELEMENT datafin EMPTY>
+<!ATTLIST datafin %data>
+
+<!ELEMENT observacions (#PCDATA)>
+
+<!ELEMENT cliente (nome,apelidos,mobil,correo?)>
+<!ATTLIST cliente id ID #REQUIRED>
+
+<!ELEMENT nome (#PCDATA)>
+<!ELEMENT apelidos (#PCDATA)>
+<!ELEMENT mobil (#PCDATA)>
+
+]>
+
+
+
+
+
+
+/* MODIFICA DTD */
+
+XML
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<material>
+
+<libro ISBN="X9-8998">
+
+<titulo>Inverno na Pereira</titulo>
+
+<editorial>Toxo verde</editorial>
+
+<autor>Xurxo Cancelas Brión</autor>
+
+<ano>2008</ano>
+
+</libro>
+
+<artigo>
+
+<titulo>O carballo</titulo>
+
+<revista numero="32">
+
+<nome>Natureza verde</nome>
+
+<paxina>4</paxina>
+
+</revista>
+
+</artigo>
+
+</material>
+
+
+/* DTD */
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE material [
+
+<!ELEMENT material (libro*|artigo*)>
+
+<!ELEMENT libro (titulo,editorial,autor,ano)>
+<!ATTLIST libro 
+        ISBN CDATA #REQUIRED>
+
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT editorial (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT ano (#PCDATA)>
+
+<!ELEMENT artigo (titulo,revista)>
+<!ELEMENT titulo (#PCDATA)>
+
+<!ELEMENT revista (nome,paxina)>
+<!ATTLIST revista 
+        numero CDATA #REQUIRED>
+
+<!ELEMENT nome (#PCDATA)>
+<!ELEMENT paxina (#PCDATA)>
+
+]>
+
+
+
+/* SONIA */
+
+<!ENTITY %libros "INCLUDE">
+<!ENTITY %artigos "IGNORE">
+
+<!DOCTYPE material [
+
+<![%libros;
+    [
+    <ELEMENT material (libro+)>
+    <ELEMENT libro (titulo,editorial,autor*,ano)>
+    <ATTLIST libro ISBN CDATA #REQUIRED>
+    <ELEMENT titulo (#PCDATA)>
+    <ELEMENT editorial (#PCDATA)>
+    <ELEMENT autor (#PCDATA)>
+    <ELEMENT ano (#PCDATA)>
+    ]
+]>     
+
+<![%artigos];
+    [
+    <ELEMENT material(artigo*)>
+    <ELEMENT artigo(titulo.revista)>
+    <ELEMENT titulo (#PCDATA)>
+    <ELEMENT revista(nome,paxina)>
+    <ELEMENT nome(#PCDATA)>
+    <ELEMENT paxina (#PCDATA)>
+    <ATTLIST revista numero CDATA #REQUIRED>
+    ]]>
+
+]>

@@ -1,0 +1,293 @@
+/// <summary>
+/// Tarea 2a_A
+/// </summary>
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE ciclos [
+
+<!ELEMENT ciclos (ciclo*)>
+
+<!ELEMENT ciclo (#PCDATA)>
+
+]>
+
+<ciclos>
+
+<ciclo>Administración de Sistemas Informáticos e Redes</ciclo>
+
+<ciclo>Desenvolvemento de Aplicacións Multiplataforma</ciclo>
+
+<ciclo>Desenvolvemento de Aplicacións Web</ciclo>
+
+</ciclos>
+
+
+
+
+
+
+
+
+
+
+
+
+/// <summary>
+/// Tarea 2a_B
+/// </summary>
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE ciclo [
+
+<!ELEMENT ciclo (modulo+)>
+
+<!ELEMENT modulo (#PCDATA)>
+
+]>
+
+<ciclo>
+    <ciclo>Desenvolvemento de Aplicacións Multiplataforma
+        <modulo>dfds</modulo>
+        </ciclo>
+    <ciclo>Desenvolvemento de Aplicacións Web
+        <modulo>dfds</modulo>
+        </ciclo>
+</ciclo>
+
+
+
+
+
+
+
+
+
+
+
+/// <summary>
+/// Tarea 2a_C
+/// </summary>
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE ciclo [
+
+<!ELEMENT ciclo (codigo*)>
+
+<!ELEMENT codigo (#PCDATA)>
+
+]>
+
+<ciclo>
+
+<codigo id="CSIFC01" >Administración de sistemas informáticos</codigo>
+
+<codigo id="CSIFC02" >Desenvolvemento de aplicacións multiplataforma</codigo>
+
+<codigo id="CSIFC03" >Desenvolvemento de aplicacións web</codigo>
+
+</ciclo>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/// <summary>
+/// Tarea 2a_D
+/// </summary>
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE familias [
+
+<!ELEMENT familias (familia*)>
+
+<!ELEMENT familia (codigo, nome)>
+
+<!ELEMENT codigo (#PCDATA)>
+
+<!ELEMENT nome (#PCDATA)>
+
+]>
+
+<familias>
+
+<familia>
+
+<codigo>IFC</codigo>
+
+<nome>Informática e comunicacións</nome>
+
+</familia>
+
+<familia>
+    
+<codigo>IMP</codigo>
+
+<nome>Imaxe persoal</nome>
+
+</familia>
+
+</familias>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/// <summary>
+/// Tarea 2a_E
+/// </summary>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE contactos [
+
+<!ELEMENT contactos (contacto*)>
+
+<!ELEMENT contacto (nome, fixo?, mobil?,correo*)>
+
+<!ELEMENT nome (#PCDATA)>
+
+<!ELEMENT fixo (#PCDATA)>
+
+<!ELEMENT mobil (#PCDATA)>
+
+<!ELEMENT correo (#PCDATA)>
+
+]>
+
+<contactos>
+
+<contacto>
+
+<nome>Xoel</nome>
+
+<fixo>989898989</fixo>
+    
+
+</contacto>
+
+<contacto>
+
+<nome>Noa</nome>
+
+<fixo>998899889</fixo>
+
+<mobil>644432344</mobil>
+    
+<correo>noa.vila@traballo.com</correo>  
+
+<correo>noa@omeucorreo.com</correo>
+
+</contacto>
+
+</contactos>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/// <summary>
+/// Tarea 2a_F
+/// </summary>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE famosos [
+
+<!ELEMENT famosos (famoso*)>
+
+<!ELEMENT famoso (nome , apodo, profesion+, dataNacemento?)>
+
+<!ELEMENT nome (#PCDATA)>
+
+<!ELEMENT apodo (#PCDATA)>
+
+<!ELEMENT profesion (#PCDATA)>
+
+<!ELEMENT dataNacimiento (#PCDATA)>
+
+]>
+
+<famosos>
+
+<famoso>
+
+<nome>Michael Jackson</nome>
+
+<apodo>El rey del pop</apodo>
+
+<profesion>cantante</profesion>
+
+</famoso>
+
+<famoso>
+
+<nome>Frank Sinatra</nome>
+
+<apodo>La voz</apodo>
+
+<dataNacemento>12-dec-1915</dataNacemento>
+
+<profesion>cantante</profesion>
+
+<profesion>actor</profesion>
+
+</famoso>
+
+</famosos>

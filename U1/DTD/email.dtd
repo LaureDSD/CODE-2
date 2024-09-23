@@ -1,0 +1,8 @@
+<!DOCTYPE mensaxe SYSTEM "mensaje.dtd" [
+<!ELEMENT mensaxe(de , para+ , asunto , adxunto* , corpo?)>
+    <!ELEMENT de (#PCDATA)>
+    <!ELEMENT para (#PCDATA)>
+    <!ELEMENT asunto (#PCDATA)>
+    <!ELEMENT adxunto (#MIXED)>
+    <!ELEMENT corpo (#PCDATA)>
+]
