@@ -1,0 +1,649 @@
+<!doctype html>
+
+<html lang=es>
+    <head>
+        <title>Resumen</title>
+        <meta charset="utf-8">
+        <meta name="author" content="laureano">
+        <meta name="descripcion" content="resumen">
+        <meta name="keywords" content="html, página, formulario">
+        <link rel="stylesheet" type="text/css" href="Base.css">
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav id="menu">
+                <ul>
+                    <li><a href="#Lista">Listas</a></li>
+                    <li><a href="#Formato">Formato</a></li>
+                    <li><a href="#Tabla">Tablas</a></li>
+                    <li><a href="#Formulario">Formulario</a>
+                        <ul>
+                            <li><a href="#Opcionales">Opcionales</a></li>
+                            <li><a href="#Nombre">Nombre</a></li>
+                            <li><a href="#Direccion">Direccion</a></li>
+                            <li><a href="#Contrasena">Contrasena</a></li>
+                            <li><a href="#Multiple">Multiple</a></li>
+                            <li><a href="#Unica">Unica</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#Listacampo">CampList</a></li>
+                    <li><a href="#Multimedia">Multi</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- -----------------------------Menu basico-------------------------------- -->
+        <fieldset id="cabecera">
+            <legend>Menu Basico</legend>
+            <h1>Menu Web</h1>
+            <br>
+            <textarea cols="100" rows="20">
+                <nav id="menu">
+                    <ul>
+                        <li><a href="#Lista">Listas</a></li>
+                        <li><a href="#Formato">Formato</a></li>
+                        <li><a href="#Tabla">Tablas</a></li>
+                        <li><a href="#Formulario">Formulario</a>
+                            <ul>
+                                <li><a href="#Opcionales">Opcionales</a></li>
+                                <li><a href="#Nombre">Nombre</a></li>
+                                <li><a href="#Direccion">Direccion</a></li>
+                                <li><a href="#Contrasena">Contrasena</a></li>
+                                <li><a href="#Multiple">Multiple</a></li>
+                                <li><a href="#Unica">Unica</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#Listacampo">Campos Lista</a></li>
+                        <li><a href="#Multimedia">Multimedia</a></li>
+                    </ul>
+                </nav>
+            </textarea>
+        </fieldset> 
+        <!-- ------------------------------------Listas--------------------------------- --> 
+        <fieldset>
+            <legend>Listas</legend>
+            <h1 id="Lista">Lista desordenada</h1>
+            <ul>
+                <li>Espacio</li>
+                <LI>Espacio</LI>
+                <li>Espacio</li>
+            </ul>
+            <h1>Lista ordenada</h1>
+            <ol>
+                <li>Espacio</li>
+                <li>Espacio</li>
+                <li>Espacio</li>
+            </ol>
+            <h1>Lista mixta</h1>
+            <ul>
+                <li>Espacio</li>
+                <ul>
+                    <li>Espacio</li>
+                    <li>Espacio</li>
+                    <ul>
+                        <li>Espacio</li>
+                        <li>Espacio</li>
+                    </ul>
+                </ul>
+                <LI>Espacio</LI>
+                <li>Espacio</li>
+            </ul>
+            <h1>Lista de definicion</h1>
+            <dl>
+                <dt>Espacio</dt>
+                <dd>Definicion Espacio</dd>
+                <dt>Espacio</dt>
+                <dd>Definicion Espacio</dd>
+            </dl>
+            <br>
+            <textarea cols="100" rows="35">
+                <h1 id="Lista">Lista desordenada</h1>
+                <ul>
+                    <li>Espacio</li>
+                    <LI>Espacio</LI>
+                    <li>Espacio</li>
+                </ul>
+                <h1>Lista ordenada</h1>
+                <ol>
+                    <li>Espacio</li>
+                    <li>Espacio</li>
+                    <li>Espacio</li>
+                </ol>
+                <h1>Lista mixta</h1>
+                <ul>
+                    <li>Espacio</li>
+                    <ul>
+                        <li>Espacio</li>
+                        <li>Espacio</li>
+                        <ul>
+                            <li>Espacio</li>
+                            <li>Espacio</li>
+                        </ul>
+                    </ul>
+                    <LI>Espacio</LI>
+                    <li>Espacio</li>
+                </ul>
+                <h1>Lista de definicion</h1>
+                <dl>
+                    <dt>Espacio</dt>
+                    <dd>Definicion Espacio</dd>
+                    <dt>Espacio</dt>
+                    <dd>Definicion Espacio</dd>
+                </dl>
+            </textarea>
+        </fieldset>
+        <!-- -------------------------------------Formato-------------------------------- -->
+        <fieldset>
+            <legend >Formato</legend>
+
+            <article>
+                <h1 id="Formato" >Titulo 1</h1>
+                <h2><del>Tachado</del></h2>
+                <p><em>Resaltado Cursiva</em></p>
+                <p><strong>Prioridad Negrita <br>con salto de linea </strong></p>
+                <pre>
+                        Pre- sin salto
+                        -for- sin salto
+                        -ma- sin salto
+                        -to sin salto
+                        </pre>
+                <br>
+                <textarea cols="100" rows="10">
+                    <h2><del>Tachado</del></h2>
+                    <p><em>Resaltado Cursiva</em></p>
+                    <p><strong>Prioridad Negrita <br>con salto de linea </strong></p>
+                    <pre>
+                        Pre- sin salto
+                        -for- sin salto
+                        -ma- sin salto
+                        -to sin salto
+                        </pre>
+                </textarea>
+                <hr>
+            </article>     
+            <article id="Centrar">    
+                <p id="parrafoformatocss">Lorem ipsum dolor sit amet, consectetur adipiscing elit.    Sed sodales lacus justo, eu sollicitudin urna placerat nec. Proin mollis varius purus ac pulvinar. In lacinia nisi odio, ut interdum ligula commodo in. Nulla pulvinar efficitur ligula. Fusce vitae ligula lobortis, consequat neque vitae, porttitor nunc. Fusce semper convallis efficitur. Etiam non ipsum elit.
+
+                    Morbi eget lectus et turpis sagittis pretium vitae in augue. Vestibulum laoreet elit in purus euismod, vel ornare lectus dictum. Aliquam erat volutpat. Sed vel placerat turpis, sed mollis dolor. Duis at maximus erat. Curabitur iaculis mi eget nisi mollis, a luctus arcu pulvinar. Morbi dolor magna, aliquet sit amet feugiat non, mollis ut diam. Nam blandit diam eu massa dapibus, quis efficitur neque semper. Maecenas aliquet risus dapibus nisl lacinia, vel luctus enim ultricies.
+
+                    Fusce a quam mauris. Etiam ultricies, lorem sed placerat tincidunt, leo massa tincidunt risus, ut gravida nulla tortor ac odio. Aliquam et elit eu tellus sodales ullamcorper. Suspendisse a suscipit nunc, ac fermentum felis. Praesent eu nibh purus. Proin et dui nec justo iaculis tempus. Aliquam nec iaculis lectus. Sed ultricies condimentum magna, vel semper lectus tincidunt et. Curabitur id lectus id dui suscipit dignissim. Cras faucibus velit eros, quis dictum tellus lobortis eget. Sed id nibh scelerisque, dignissim leo sit amet, sollicitudin tortor. Nunc viverra sem tempor neque pharetra dignissim. Nulla facilisi. Pellentesque vitae magna vitae lectus ultricies bibendum. Aliquam suscipit aliquet mi, eu bibendum libero.</p>
+            </article>
+        </fieldset>
+        <!-- ---------------------------------Campo oculto-------------------------------- -->  
+        <fieldset>
+            <legend>Tablas</legend>
+            <!-- <border="2" -->
+            <table>
+                <caption id="Tabla">Titulo</caption>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>TituloC</th>
+                        <th>TituloC</th>
+                        <th>TituloC</th>
+                        <th>TituloC</th>
+                        <th>TituloC</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> TituloF</td>
+                        <td rowspan="2" >  Espacio </td>
+                        <td>  Espacio </td>
+                        <td>  Espacio </td>
+                        <td>  Espacio </td>
+                        <td id="Abajo" rowspan="2">  Espacio </td>
+                    </tr>
+                    <tr>
+                        <td> TituloF</td>
+                        <td>  Espacio </td>
+                        <td> Espacio </td>
+                        <td> Espacio </td>
+                    </tr>
+                    <tr>
+                        <td> TituloF</td>
+                        <td colspan="5"> Espacio </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td> TituloF</td>
+                        <td> Espacio </td>
+                        <td> Espacio </td>
+                        <td> Espacio </td>
+                        <td> Espacio </td>
+                        <td> Espacio </td>
+                    </tr>
+                </tfoot> 
+            </table>
+            <br>
+            <textarea cols="100" rows="45">
+                <table>
+                    <caption id="Tabla">Titulo</caption>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>TituloC</th>
+                            <th>TituloC</th>
+                            <th>TituloC</th>
+                            <th>TituloC</th>
+                            <th>TituloC</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> TituloF</td>
+                            <td rowspan="2" >  Espacio </td>
+                            <td>  Espacio </td>
+                            <td>  Espacio </td>
+                            <td>  Espacio </td>
+                            <td id="Abajo" rowspan="2">  Espacio </td>
+                        </tr>
+                        <tr>
+                            <td> TituloF</td>
+                            <td>  Espacio </td>
+                            <td> Espacio </td>
+                            <td> Espacio </td>
+                        </tr>
+                        <tr>
+                            <td> TituloF</td>
+                            <td colspan="5"> Espacio </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td> TituloF</td>
+                            <td> Espacio </td>
+                            <td> Espacio </td>
+                            <td> Espacio </td>
+                            <td> Espacio </td>
+                            <td> Espacio </td>
+                        </tr>
+                    </tfoot> 
+                </table>
+            </textarea>
+        </fieldset>
+        <!-- ----------------------------------Formulario-------------------------------- -->
+        <form id="Formulario" action="#enlaceDestino" method="post">
+            <textarea cols="100" rows="2">
+                <!-- <form id="Formulario" action="#enlaceDestino" method="post"> -->
+                </textarea>
+            
+            <!-- ------------------------------------Agrupa---------------------------------- -->
+            <fieldset>
+                <legend id="Opcionales">Titulo Grupo</legend>
+
+                <input type="range" tabindex="1"/>
+                <input type="color" tabindex="2" value="#5AB600"/>
+                <label>Search:</label>
+                <input type="search" tabindex="3" />
+
+                <br>
+                <textarea cols="100" rows="5">
+                    <input type="range" tabindex="1"/>
+                    <input type="color" tabindex="2" value="#5AB600"/>
+                    <input type="search" tabindex="3" />
+                    <label>Search</label>
+                </textarea>
+            </fieldset>
+            <!-- -----------------------------Agrupa completo--------------------------------- -->   
+            <fieldset>
+                <legend>Campos Rellenar Datos</legend>
+                <!-- ---------------------------Campo texto completo----------------------------- -->    
+                <label id="Nombre">
+                    <span>Nombre:</span>
+                    <input type="text" name="nombre" maxlength="10" size="10"  required="required"/>
+                </label>
+                <!-- -------------------------Campo texto fondo completo------------------------- -->
+                <label id="Direccion">
+                    <span>Direccion:</span>
+                    <input type="text" name="direccion" placeholder="Rellena aqui" maxlength="10" size="10"  required="required" readonly="readonly"/>
+                </label>  
+                <!-- ----------------------------Campo contra completo--------------------------- -->    
+                <label id="Contrasena">
+                    <span>Contraseña:</span>
+                    <input type="password" name="password" placeholder="Numeros y caracteres, max8" maxlength="20" size="20" required="required" disabled="disabled"/>
+                </label>
+                <br>
+                <label id="telefono">
+                    <span>Telefono:</span>
+                    <input type="tel" name="telefono" maxlength="9" size="9"  required="required" placeholder="698523547"/>
+                </label>
+                <span> Numerico: </span>
+                <input type="number" name="nuumero" value="0" min="1" max="5"/>
+
+                <br>
+                <textarea cols="100" rows="32">
+                    <!-- ---------------------------Campo texto completo----------------------------- -->    
+                    <label id="Nombre">
+                        <span>Nombre:</span>
+                        <input type="text" name="nombre" maxlength="10" size="10"  required="required"/>
+                    </label>
+                    <!-- -------------------------Campo texto fondo completo------------------------- -->
+                    <label id="Direccion">
+                        <span>Direccion:</span>
+                        <input type="text" name="direccion" placeholder="Rellena aqui" maxlength="10" size="10"  required="required" readonly="readonly"/>
+                    </label>  
+                    <!-- ----------------------------Campo contra completo--------------------------- -->    
+                    <label id="Contrasena">
+                        <span>Contraseña:</span>
+                        <input type="password" name="password" placeholder="Numeros y caracteres, max8" maxlength="20" size="20" required="required" disabled="disabled"/>
+                    </label>
+                    <!-- ----------------------------Telefono completo--------------------------- -->                    
+                    <br>
+                    <label id="telefono">
+                        <span>Telefono:</span>
+                        <input type="tel" name="telefono" maxlength="9" size="9"  required="required" placeholder="698523547"/>
+                    </label>
+                    <!-- ----------------------------NUmerico completo--------------------------- -->                    
+                    <span> Numerico: </span>
+                    <input type="number" name="nuumero" value="0" value="numero" min="1" max="5"/>                
+                </textarea>
+            </fieldset>
+            <!-- -----------------------Campo opciones multiples completo--------------------- -->
+            <fieldset>
+                <legend>Opcion Multiple</legend>
+
+                <label id="Multiple">Seleccion Multiple:</label>
+                <br>
+                <span>Estudiante</span>
+                <input type="checkbox" name="posicion" value="estudiante" disabled="disabled"/>
+
+                <span>Empleado</span>
+                <input type="checkbox" name="posicion" value="empleado" checked/>
+
+                <span>Jefe</span>
+                <input type="checkbox" name="posicion" value="jefe"/>
+                <br>
+                <textarea cols="100" rows="6">
+                    <label id="Multiple">Seleccion Multiple:</label>
+                    <br>
+                    <span>Estudiante</span>
+                    <input type="checkbox" name="posicion" 
+                           value="estudiante" disabled="disabled" checked/> 
+                </textarea>
+            </fieldset>
+            <!-- -----------------------Campo opciones unicas completa------------------------ -->     <fieldset>
+            <legend>Opcion Unica</legend>
+
+            <label id="Unica">Seleccion Unica:</label>
+            <br>
+            <input type="radio" name="color_icono" value="color1" disabled="disabled"/>
+            <span>color1</span>
+
+            <input type="radio" name="color_icono" value="color2" checked/>
+            <span>color2</span>
+            <input type="radio" name="color_icono" value="color3"/>
+            <span>color3</span>
+            <br>
+            <textarea cols="100" rows="4">
+                <label id="Unica">Seleccion Unica:</label>
+                <input type="radio" name="color_icono" 
+                       value="color1" disabled="disabled" checked/>
+            </textarea>
+
+            </fieldset>
+            <!-- --------------------------------Campo texto---------------------------------- -->
+            <fieldset>
+                <legend>Texto</legend>
+                <label>Campo Texto:</label>
+                <br>
+                <textarea name="observaciones" cols="100" rows="10">
+                </textarea>
+                <br>
+                <textarea cols="100" rows="4">
+                    <label>Campo Texto:</label>
+                    <br>
+                    <textarea name="observaciones" cols="100" rows="10">
+                    </textarea>
+                </textarea>
+            </fieldset>
+            <!-- ---------------------------Listas simples Completa--------------------------- -->
+            <fieldset>
+                <legend id="Listacampo">Listas Simples</legend>
+                <label>Lista Simple</label>
+                <br>
+                <select size="2">
+                    <option value="Selccion" selected>Selecciona un dia</option>
+                    <option value="Lunes">Lunes</option>
+                    <option value="Martes">Martes</option>
+                    <option value="Miercoles">Miercoles</option>
+                    <option value="Jueves">Jueves</option>
+                    <option value="Viernes">Viernes</option>
+                </select>
+                <br>
+                <textarea cols="100" rows="10">
+                    <label>Lista Simple</label>    
+                    <select size="2">
+                        <option value="Selccion" selected>Selecciona un dia</option>
+                        <option value="Lunes">Lunes</option>
+                        <option value="Martes">Martes</option>
+                        <option selected value="Miercoles">Miercoles</option>
+                        <option value="Jueves">Jueves</option>
+                        <option value="Viernes">Viernes</option>
+                    </select>
+                </textarea>
+            </fieldset>
+            <!-- -----------------------Listas con titulo completa------------------------- -->
+            <fieldset>
+                <legend>Listas Simples Agrupadas</legend>
+                <label>Titulo Lista:</label>
+                <select>
+                    <optgroup label="Grupo1">
+                        <option value="Montaje">Opcion1.1</option>
+                        <option value="Monta">Opcion1.2</option>
+                        <option value="je">Opcion1.3</option>
+                    </optgroup>
+                    <optgroup label="Grupo2">
+                        <option selected value="Montaje">Opcion2.1</option>
+                        <option value="Montaje">Opcion2.2</option>
+                        <option value="Montaje">Opcion2.3</option>
+                    </optgroup>
+                </select>
+                <br>
+                <textarea cols="100" rows="14">
+                    <label>Titulo Lista:</label>
+                    <select>
+                        <optgroup label="Grupo1">
+                            <option value="Montaje">Opcion1.1</option>
+                            <option value="Monta">Opcion1.2</option>
+                            <option value="je">Opcion1.3</option>
+                        </optgroup>
+                        <optgroup label="Grupo2">
+                            <option selected value="Montaje">Opcion2.1</option>
+                            <option value="Montaje">Opcion2.2</option>
+                            <option value="Montaje">Opcion2.3</option>
+                        </optgroup>
+                    </select>
+                </textarea>
+            </fieldset> 
+            <!-- ---------------------------------Campo oculto-------------------------------- -->
+            <fieldset>
+                <legend>Oculto</legend>
+                <input type="hidden" name="tipo" value="prueba"/>
+
+                <textarea cols="100" rows="1">
+                    <input type="hidden" name="tipo" value="prueba"/>
+                </textarea>
+            </fieldset>
+            <!-- -----------------------------Campo Lista multiple---------------------------- -->
+            <fieldset>
+                <legend>Lista Multiple</legend>
+                <label>Titulo Lista :</label>
+                <br>
+                <select multiple name="opciones">
+                    <option value="Seleccion">Predefinido</option>
+                    <option value="Opcion1">Opcion1</option>
+                    <option selected value="Opcion2">Opcion2</option>
+                    <option value="Opcion3">Opcion3</option>
+                    <option value="Opcion4">Opcion4</option>
+                    <option value="Opcion5">Opcion5</option> 
+                </select>
+                <br>
+                <textarea cols="100" rows="11">
+                    <label>Titulo Lista :</label>
+                    <br>
+                    <select multiple name="opciones">
+                        <option value="Seleccion">Predefinido</option>
+                        <option value="Opcion1">Opcion1</option>
+                        <option selected value="Opcion2">Opcion2</option>
+                        <option value="Opcion3">Opcion3</option>
+                        <option value="Opcion4">Opcion4</option>
+                        <option value="Opcion5">Opcion5</option> 
+                    </select>
+                </textarea>
+            </fieldset>
+            <!-- ----------------------------Campo fechas--------------------------------- -->
+            <fieldset>
+                <legend>Fecha</legend>
+                <label>Fecha :</label>
+                <br>
+                <input type="date" name="cumple" value="2013-02-02" max="2023-09-23" min="2023-09-10" />
+                <input type="time"/>
+                <input type="datetime-local"/>
+                <input type="month"/>
+                <input type="week"/>
+                <br>
+                <textarea cols="100" rows="9">
+                    <label>Fecha :</label>
+                    <br>
+                    <input type="date" name="cumple" value="2013-02-02" 
+                           max="2023-09-23" min="2023-09-10" />
+                    <input type="time"/>
+                    <input type="datetime-local"/>
+                    <input type="month"/>
+                    <input type="week"/>
+                </textarea>
+            </fieldset>
+            <!-- ----------------------------Subir Archivo--------------------------------- -->
+            <fieldset>
+                <legend>Archivo</legend>
+                <label>Archivo :</label>
+                <br>
+                <input type="file" multiple name="uploads" id="uploads" />
+                <br>
+                <textarea cols="100" rows="4">
+                    <label>Archivo :</label>
+                    <br>
+                    <input type="file" multiple name="uploads" id="uploads" />
+                </textarea>
+            </fieldset>
+            <!-- -------------------------------Lista Email------------------------------------ -->
+            <fieldset>
+                <legend>Email Lista</legend>
+                <label for="emails">Correo electrónico</label>
+                <input type="email" multiple name="emails" id="emails" list="drawfemails" tabindex="1" required size="64" />
+                <datalist id="drawfemails">
+                    <option value="nombre1@test.com">nombre1</option>
+                    <option value="nombre2@test.com">nombre2</option>
+                    <option value="nombre3@test.com">nombre3</option>
+                </datalist>
+                <br>
+                <textarea cols="100" rows="9">
+                    <label for="emails">Correo electrónico</label>
+                    <input type="email" multiple name="emails" id="emails"
+                           list="drawfemails" tabindex="1" valid required size="64" />
+                    <datalist id="drawfemails">
+                        <option value="nombre1@test.com">nombre1</option>
+                        <option value="nombre2@test.com">nombre2</option>
+                        <option value="nombre3@test.com">nombre3</option>
+                    </datalist>
+                </textarea>
+            </fieldset>
+            <!-- -----------------------------Boton enviar--------------------------------- -->      
+            <fieldset>
+                <legend>Enviar</legend>
+                <br>
+                <input type="submit" value="enviar"/>
+                <br>
+                <input type="image" src="Recursos/catedrais.jpeg" width="80" height="50" alt="Imagen"/>
+                <br>
+                <textarea cols="100" rows="5">
+                    <input type="submit" value="enviar"/>
+                    <br>
+                    <input type="image" src="Recursos/catedrais.jpeg" 
+                           width="80" height="50" alt="Imagen"/>
+                </textarea>
+
+            </fieldset>
+            <!-- ----------------------------Boton reinicio-------------------------------- -->
+            <fieldset>
+                <legend>Reset</legend>
+                <br>
+                <input type="reset" value="borrar"/>
+                <br>
+                <textarea cols="100" rows="1">
+                    <input type="reset" value="borrar"/>
+                </textarea>
+            </fieldset>
+        </form>
+        <!-- -------------------------------Imagen------------------------------------ -->
+        <fieldset>
+            <legend id="Multimedia">Imagen</legend>
+            <img src="Recursos/how-are-margins-borders-padding-and-content-related-01.png" width="890" height="600" alt="Definicion" title="Htitulo imagen">
+            <br>
+            <textarea cols="100" rows="3">
+                <img src="Recursos/how-are-margins-borders-padding-and-content-related-01.png" width="890" height="600" alt="Definicion" title="Htitulo imagen">
+            </textarea>
+        </fieldset>
+        <!-- -----------------------------Imagen web---------------------------------- -->
+        <fieldset>
+            <legend>Imagen web</legend>
+            <a href="http://www.w3.org/html/logo/">
+                <img src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" width="63" height="64" alt="HTML5 Powered" title="HTML5 Powered">
+            </a>
+            <br>
+            <textarea cols="100" rows="5">
+                <a href="http://www.w3.org/html/logo/">
+                    <img src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" width="63" height="64" alt="HTML5 Powered" title="HTML5 Powered">
+                </a>
+            </textarea>
+        </fieldset>
+        <!-- --------------------------------Video------------------------------------ -->
+        <fieldset>
+            <legend>Video local</legend>
+            <video width="850" height="480" controls>
+                <source src="Recursos/mylivewallpapers.com-Hex-Grid.mp4" type="video/mp4">
+                <source src="Recursos/ordenador_en_aceite.webm" 
+                        type="video/webm">
+                <source src="Recursos/ordenador_en_aceite.ogg" 
+                        type="video/ogg">
+            </video>
+            <br>
+            <textarea cols="100" rows="8">
+                <video width="850" height="480" controls>
+                    <source src="Recursos/mylivewallpapers.com-Hex-Grid.mp4" type="video/mp4">
+                    <source src="Recursos/ordenador_en_aceite.webm" 
+                            type="video/webm">
+                    <source src="Recursos/ordenador_en_aceite.ogg" 
+                            type="video/ogg">
+                </video>
+            </textarea>
+        </fieldset>
+        <!-- ------------------------------Video web---------------------------------- -->
+        <fieldset>
+            <legend>Video web</legend>
+            <br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/UAOm_-LvQrQ" title="Video Youtuve" ></iframe>
+            <br>
+            <textarea cols="100" rows="3">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/UAOm_-LvQrQ" title="Video Youtuve" ></iframe>
+            </textarea>
+        </fieldset>
+        <!-- -------------------------------Sonido------------------------------------ -->
+        <fieldset>
+            <legend>Audio local</legend>
+            <audio src="Recursos/son.mp3" controls autoplay></audio>
+            <br>
+            <textarea cols="100" rows="2">
+                <audio src="Recursos/son.mp3" controls autoplay></audio>
+            </textarea>
+        </fieldset>
+        <footer>
+            <a href="http://www.w3.org/html/logo/">
+                <img src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" width="63" height="64" alt="HTML5 Powered" title="HTML5 Powered">
+            </a>
+        </footer>
+    </body>
+</html>

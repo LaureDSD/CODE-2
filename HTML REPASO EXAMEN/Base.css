@@ -1,0 +1,264 @@
+/* Menu y links*/
+
+#cabecera {
+    margin-top: 100px;
+    opacity: 100%;
+}
+
+a:visited {
+    color: gold;
+}
+
+a:active {
+    color: dimgrey;
+}
+
+a:link {
+    color:darkcyan;
+}
+
+a:hover {
+    color: black;
+}
+
+header {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav {
+   position:fixed;
+	top:0%;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav ul {
+    list-style:none;
+}
+
+nav ul li:hover {
+ background-color: gold;
+}
+
+nav ul li {
+    
+ background-color:midnightblue;
+    
+    border-radius: 5px;
+    border: 2px;
+    border-style: solid;
+    border-color: black;
+}
+
+nav ul a {
+    display:block;
+    text-decoration:none;
+    font-weight:400;
+    font-size:20px;
+    padding: inherit;
+        padding-left:21px;
+        padding-right: 21px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+ letter-spacing:2px;
+}
+
+nav ul ul a {
+ line-height:120%;
+}
+
+nav ul li {
+ position:relative;
+ float:left;
+}
+
+nav ul ul {
+ display:none;
+ position:absolute;
+ padding:0;
+}
+
+nav ul ul li {
+ width:150px
+}
+
+nav ul li:hover > ul {
+ display:block;
+}
+
+
+/* Pagina */
+
+
+
+* {
+    line-height: 1.5em;
+}
+
+body {
+    color: white;
+    background-color: black;
+    background-size: contain;
+    background-repeat: repeat;
+    background-image: url(Recursos/fondo-hexagonal-oscuro-color-degradado_79603-1410.avif);
+    background-position: top;
+}
+
+
+article h1 {
+    
+    font-size: 1,5em;
+    font-family:Verdana;
+   
+    color: red;
+    
+    letter-spacing: 800;
+    
+    text-shadow: 50px;
+    
+}
+
+
+#parrafoformatocss {
+    
+    font-weight: normal;
+    font-style:italic;
+    
+    letter-spacing: 4px;
+    
+    word-spacing: 4px;
+    
+    text-height: 20px;
+    text-transform: uppercase;
+    text-align: justify;
+    text-decoration: underline;
+    text-indent: 20px;
+    
+    width: 800px;
+}
+
+fieldset {
+    padding-bottom: 0px;
+    /*opacity: 80%;*/
+    background-color: black;
+    margin-bottom: 100px;
+}
+
+img {
+    border-right:solid 3px white;
+    border-left: dotted 1px blue;
+    border-top: solid 5px green;
+    border-bottom: dotted 5px pink;
+}
+
+video {
+    border-style: outset;
+    border-width: 6px;
+    border-color: black;
+}
+
+spanm{
+    margin: 10px;
+}
+
+input {
+    margin-left: 10px;
+    margin: 10px;
+}
+
+#Centrar {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+textarea {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+}
+/* Pie de Pagina */
+
+footer {
+     clear: both;
+    
+    height: calc(100vh -300px);
+    
+    background-color: black;
+    color: white;
+    
+    padding: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 10px;
+        padding-left: 10px;
+            
+    border-style:groove;
+    
+    border-width: 10px;
+        border-top-width: 10px; 
+        border-bottom-width: 10px; 
+        border-left-width: 10px; 
+        border-right-width: 10px;
+    
+    border-color: black;
+        border-bottom-color: black;
+        border-right-color: black;
+        border-top-color: black;
+        border-left-color: black;
+    
+    margin: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+}
+
+footer a {
+    background-color: black;
+    margin: 20px;
+}
+
+/* Tabla */
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+th, td {
+    max-width: 80px;
+    border: solid 4px black;
+        border-style: solid;
+        border-width: 4px;
+        border-color: black;
+    background-color: white;
+    color: black;
+    padding: 14px;
+}
+
+th:first-child {
+    /*opacity: 0%;*/
+    visibility: hidden;
+}
+            
+tr:nth-child(1){
+    vertical-align: top;
+}
+            
+#Abajo {
+    vertical-align: bottom;
+}
+            
+tr:nth-last-child() {
+    vertical-align: middle;
+}
+
+img {
+    vertical-align: middle;
+}
