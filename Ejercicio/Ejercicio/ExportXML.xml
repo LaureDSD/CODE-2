@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ROOT SYSTEM "ExportXML.dtd">
+<ROOT>
+    <row>
+      <field name="numero">2</field>
+      <field name="nombre">Antonio gomez</field>
+      <field name="nota1">8</field>
+      <field name="nota2">7</field>
+      <field name="nota3">3</field>
+      <field name="materia">GALLEGO</field>
+      <field name="curso">4ESO</field>
+    </row>
+    <row>
+      <field name="numero">3</field>
+      <field name="nombre">Sonia Martínez</field>
+      <field name="nota1">9</field>
+      <field name="nota2">9</field>
+      <field name="nota3">9</field>
+      <field name="materia">INGLES</field>
+      <field name="curso">BACA</field>
+    </row>
+</ROOT>
