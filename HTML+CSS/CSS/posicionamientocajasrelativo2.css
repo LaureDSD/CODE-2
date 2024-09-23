@@ -1,0 +1,18 @@
+div{
+    position: relative;
+}
+div#caja1{
+   background-color: aqua; 
+}
+div#caja2{
+    background-color: saddlebrown;
+    position: absolute;
+    top: 10px;
+    left: 50px;
+}
+div#caja3{
+    background-color: fuchsia; 
+}
+div#caja4{
+    background-color: khaki; 
+}

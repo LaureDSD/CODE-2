@@ -1,0 +1,39 @@
+p {
+    color: blue;
+}
+
+p.especial {
+    color: blue;
+}
+
+h1, h2, h3 {
+    color: blue;
+}
+
+.destacada {
+    color: blue;
+}
+
+p, strong.destacada {
+    color: blue;
+}
+
+p, .destcada {
+    color: blue;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:active {
+    color: blue;
+}
+
+a:link {
+    color:blue;
+}
+
+a:hover {
+    color: blue;
+}

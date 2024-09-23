@@ -1,0 +1,27 @@
+body {
+    background-image: url(recursos/fondo1.jpg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    background-image: url(recursos/vi%C3%B1eta2.JPG);
+    background-repeat: repeat-x;
+    border-color: white;
+    border-style: inherit;
+    border-right: 4px;
+}
+
+h2 {
+    background-color: white;
+}
+
+p {
+    margin: 10px;
+}
+
+#parafo_importante {
+    border-style: solid;
+    border-right: 2px;
+    border-color: gray;
+}

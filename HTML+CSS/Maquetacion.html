@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+
+<html>
+
+    <!-- Head , encabezado pagina web, informacion de esta no visible alusuario -->
+    <head>
+        <title>menus</title>
+        <meta charset=utf-8>
+        <meta name="Autor" content="laure">
+        <meta name="pagina web prueba" content="HTML5+Menu">
+        <meta name="etiquetas" content="Pagina web, html, prueba">   
+        
+        <style type="text/css">
+
+            nav ul {
+                list-style-type: none;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: stretch;
+                }
+            
+            section ul {
+                display:flex;
+                flex-direction: colum;
+            }
+            
+            li{
+                flex-grow: 1;
+            }
+            
+            ul {
+                list-style-type: none;
+                margin: 0px;
+                padding: 0px;
+            }
+            
+            a{
+                display: block;
+                padding: 1em;
+                background-color: darkgrey;
+                text-align: center;
+                margin-right: 0,2em;
+                margin-bottom: 0,2em;
+                text-decoration: none;
+                color:#000000;
+            }
+            
+            a:hover {
+                background-color: red;
+            }
+            
+            nav ul li {
+                float: left;
+                padding: 5px;
+            }
+            
+            section {
+                clear:both;
+            }
+            
+            nav ul ul li {
+                display: block;
+                float: none;
+                visibility: hidden;
+            }
+            nav ul ul :hover{
+                display: inline;
+                visibility: visible;
+            }
+            
+            section {
+                clear: both;
+            }
+            
+            nav ul li:hover{
+                display: inline;
+                visibility: visible;
+            }
+            
+            header {
+                height: calc(100vh -300px);
+                background-color: aqua;
+                padding: 30px;
+                
+            }
+            
+            header{
+                padding-top: 20px;
+            }
+            
+            nav {
+                width: 200px;
+                height: 300px;
+                background-color: gainsboro;
+            }
+            
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            
+            
+            
+            
+
+            @media (min-width: 1000px){
+                body {
+                    background-color: red;
+                }
+            }
+            
+            @media (min-width: 1200px){
+                body {
+                    background-color: green;
+                }
+                }
+            
+            @media (min-width: 1400px){
+                body {
+                    background-color: blue;
+                }
+                }
+            
+            @media (max-width: 1000px){
+                body {
+                    background-color: yellow;
+                }
+                }
+                
+            }
+</style>
+        
+    </head>
+
+    <body>
+       
+        <header>
+        
+        <h1>Funcion calc() e unidade vh</h1>
+            <p>
+             vh: 100vh é  a altura do navegador.
+             vw:  100vh é o ancho do navegador
+             vmin: A menor das dúas medidas.
+             vmax: A maior das dúas medidas.
+            </p>
+        
+        </header>
+        
+        <nav>
+         <ul>
+            <li><a href="#">lista1</a></li>
+            <li><a href="#">lista2</a></li>
+             <ul>
+                <li><a href="#">lista2.1</a></li>
+                <li><a href="#">lista2,1</a></li>
+                <li><a href="#">lista2.1</a></li>
+             </ul>
+            <li><a href="#">lista3</a></li>
+        </ul>
+       </nav>
+        
+        <section>
+         <nav>
+         <ul>
+            <li><a href="#">lista4</a></li>
+            <li><a href="#">lista5</a></li>
+            <li><a href="#">lista6</a></li>
+        </ul>
+       </nav>
+        </section>
+        
+        <p>@media (min-width: 1000px){
+                body {
+                    background-color: red;
+                }
+            }
+            
+            @media (min-width: 1200px){
+                body {
+                    background-color: green;
+                }
+                }
+            
+            @media (min-width: 1400px){
+                body {
+                    background-color: blue;
+                }
+                }
+            
+            @media (max-width: 1000px){
+                body {
+                    background-color: yellow;
+                }</p>
+        
+        
+        
+        <a href="http://www.w3.org/html/logo/">
+<img src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" width="63" height="64" alt="HTML5 Powered" title="HTML5 Powered">
+</a>
+        
+        
+        
+    </body>
+</html>

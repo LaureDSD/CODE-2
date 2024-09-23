@@ -1,0 +1,123 @@
+<html>
+
+    <!-- Head , encabezado pagina web, informacion de esta no visible alusuario -->
+    <head>
+        <title>menus</title>
+        <meta charset=utf-8>
+        <meta name="Autor" content="laure">
+        <meta name="pagina web prueba" content="HTML5+Menu">
+        <meta name="etiquetas" content="Pagina web, html, prueba">     
+    </head>
+    <body>
+        
+        <form action="mailto://sonia@iessanmamede.com" method="post">
+            
+            <!-- Agrupa -->
+            <fieldset>
+                
+                <legend>Datos Personales</legend>
+                
+            <!-- Campo texto -->
+            <br> 
+            Nombre :<input type="text" name="nombre" maxlength="10" size="10" readonly="readonly" required="required" alt="Nombre de usuario"/>
+            <br>
+            
+            <!-- Campo texto fondo -->
+            <br>
+            Direccion :<input type="text" name="nombre" maxlength="10" size="10" placeholder="Rellena aqui" tabindex="1"/>
+            <br>
+            
+            <!-- Campo contra -->
+            <br>
+            Password :<input type="password" name="password" disabled="disabled"/>
+            <br>
+                
+                
+            </fieldset>
+            
+            
+            <!-- Campo opciones multiples -->
+            <br>
+            Profesion :<input type="checkbox" name="estudiante" value="estudiante"/>
+            <br>
+            Empleado :<input type="checkbox" name="Empleado" value="empleado"/>
+            <br>
+            Jefe :<input type="checkbox" name="jefe" value="Jefe"/>
+            <br>
+            
+            <!-- Campo opciones unicas -->
+            <br>
+            <input type="radio" name="color_icono" value="rojo"/>rojo
+            <input type="radio" name="color_icono" value="verde"/>verde
+            <input type="radio" name="color_icono" value="azul"/>azul
+            <br>
+            
+            <!-- Campo texto -->
+            <br>
+            Observaciones: <br> <textarea name="observaciones" cols="100" rows="10"></textarea>
+            <br>
+            
+            <!-- Listas simples-->
+            <br>
+            Dias de la semana
+            <br>
+            <select size="2">
+                <option value="Selccion" selected>Selecciona un dia</option>
+                <option value="Lunes">Lunes</option>
+                <option value="Martes">Martes</option>
+                <option value="Miercoles">Miercoles</option>
+                <option value="Jueves">Jueves</option>
+                <option value="Viernes">Viernes</option>
+            </select>
+            <br>
+            
+            <!-- Listas con titulo -->
+            <br>
+            Modulos :
+            <br>
+            <select>
+                <optgroup label="Primero">
+                    <option value="Montaje">Montaje</option>
+                    <option value="Monta">Monta</option>
+                    <option value="je">je</option>
+                </optgroup>
+                <optgroup label="Segundo">
+                    <option value="Montaje">Montaje</option>
+                    <option value="Montaje">Montaje</option>
+                    <option value="Montaje">Montaje</option>
+                </optgroup>
+            </select>
+            <br>
+            
+            <!-- Campo oculto -->
+            <br>
+            <input type="hidden" name="tipo" value="prueba"/>
+            
+            <!-- Campo Lista multiple -->
+            <br>
+            <select multiple name="fiesta">
+                <option value="Seleccion">Seleccione dia:</option>
+                <option value="Martes">Martes</option>
+                <option value="Viernes">Viernes</option>
+                <option value="Jueves">Jueves</option>       
+            </select>
+            <br>
+                
+            <!-- Campo fechas -->
+            <br>
+            Cumpleaños:<br>
+            <input type="date" name="cumple" max="2023-09-23"/>
+            <br>
+                
+            <!-- Boton enviar -->
+            <br>
+            <input tipe="submit" value="enviar"/>
+            <br>
+                
+            <!-- Boton reinicio -->
+            <br>
+            <input tipe="reset" value="borrar"/>
+            
+        </form>
+    </body>
+</html>

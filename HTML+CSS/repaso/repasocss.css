@@ -1,0 +1,12 @@
+hr {
+    color: sienna;
+    height: 1px;
+    border-color: blue;
+}
+p {
+    margin-left: 20px;
+}
+body {
+    background-color: red;
+    /^ background-image: url(recursos/fondo1.jpg); */
+}

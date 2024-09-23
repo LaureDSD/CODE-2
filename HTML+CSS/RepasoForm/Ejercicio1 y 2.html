@@ -1,0 +1,63 @@
+<!doctype html>
+
+<html lang=es>
+    <head>
+        <title>Resumen</title>
+        <meta charset="utf-8">
+        <meta name="author" content="laureano">
+        <meta name="descripcion" content="resumen">
+        <meta name="keywords" content="html, página, formulario">
+        <link rel="stylesheet" type="text/css" href="Base.css">
+
+        <style type="text/css">
+            #nombre input {
+                border-width: 2px;
+                border-color: darkgrey;
+                border-style: dashed;
+            }
+
+            #text input {
+                border-width: 2px;
+                border-color: darkgrey;
+                border-style: dotted;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <form id="formulario" action="#enlaceDestino" method="post">
+
+            <h1>ejercicio 1/2 FORMULARIOS</h1>
+
+
+            <fieldset>
+                <legend >Datos Personales</legend>
+
+
+                <label id="nombre">
+                    <span>Introduce tu nombre:</span>
+                    <input type="text" name="nombre" maxlength="10" size="20"  required="required"/>
+                </label>
+                <br>
+                <label id="text">
+                    <span>Mensaje:</span>
+                    <br>
+                    <input type="text" name="texto" maxlength="20" size="50"  required="required"/>
+                </label>
+                <hr>
+                <br>
+                <input type="submit" value="enviar"/>
+
+
+                <input type="reset" value="borrar"/>
+                <hr>
+            </fieldset> 
+
+
+
+
+
+        </form>
+    </body>
+</html>

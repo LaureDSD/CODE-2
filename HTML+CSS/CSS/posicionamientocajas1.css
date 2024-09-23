@@ -1,0 +1,15 @@
+div{
+    position: static;
+}
+div#1{
+   background-color: aqua; 
+}
+div#2{
+    background-color: saddlebrown;
+}
+div#3{
+    background-color: fuchsia; 
+}
+div#4{
+    background-color: khaki; 
+}

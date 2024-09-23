@@ -1,0 +1,144 @@
+<!doctype html>
+
+<html lang=es>
+    <head>
+        <title>Resumen</title>
+        <meta charset="utf-8">
+        <meta name="author" content="laureano">
+        <meta name="descripcion" content="resumen">
+        <meta name="keywords" content="html, página, formulario">
+        <link rel="stylesheet" type="text/css" href="Base.css">
+        <style type="text/css">
+
+        </style>
+    </head>
+    <body>
+        <h1>ejercicio 4 FORMULARIOS Y CSS</h1>
+        <form id="formulario" action="#enlaceDestino" method="post">
+            <label for="emails">Correo electrónico</label>
+            <input type="email" valid multiple name="emails" id="emails" list="drawfemails" required size="64"/>
+            <datalist id="drawfemails">
+                <option value="nombre1@test.com">nombre1</option>
+                <option value="nombre2@test.com">nombre2</option>
+                <option value="nombre3@test.com">nombre3</option>
+            </datalist>
+            <article> 
+                <fieldset>
+                    <legend >Datos Personales</legend>
+                    <label id="nombre">
+                        <span>Introduce tu nombre:</span>
+                        <input type="text" name="nombre" maxlength="20" size="20"  required="required" placeholder=" Torres"/>
+                    </label>
+                    <br>
+                    <label id="Apellidos">
+                        <span>Introduce tus apellidos:</span>
+                        <input type="text" name="apellidos" maxlength="20" size="20"  required="required" placeholder=" Torres"/>
+                    </label>  
+
+                    <br>
+                    <label id="password">
+                        <span>Introduce tu clave:</span>
+                        <input type="password" name="contrasena" maxlength="8" size="15"  required="required" placeholder="*****"/>
+                    </label>
+
+                    <hr>
+                    <label id="procedencia">
+                        <!-- <span>Procedencia:</span> -->
+                        <input type="text" name="procedencia" maxlength="10" size="15"  placeholder="Espana" hidden readonly />
+                    </label>
+
+                    <br>
+                    <label id="telefono">
+                        <span>Telefono:</span>
+                        <input type="tel" name="telefono" maxlength="9" size="9"  required="required" placeholder="698523547"/>
+                    </label>
+
+                    <hr>
+                    <label id="direccionfiscal">
+                        <span>Direccion Fiscal:</span>
+                        <input type="text" name="telefono" maxlength="15" size="15"  required="required" placeholder="Carud 345"/>
+                    </label>
+
+                </fieldset> 
+                <label id="fecha">
+                    <span>Fecha de ingreso:</span>
+                    <input type="date" name="fecha" maxlength="8" size="8"  required="required" value="2013-02-02" min="2012-01-01" max="2013-12-31 "/>
+                </label>
+                <hr>
+                <label>Selecciona los dias de disponibilidad:</label>
+                <br>
+                <input type="checkbox" name="posicion" value="estudiante"/>
+                <span>Lunes</span>
+                <br>
+                <input type="checkbox" name="posicion" value="empleado" checked/>
+                <span>Martes</span>
+                <br>
+                <input type="checkbox" name="posicion" value="jefe" checked/>
+                <span>Miercoles</span>
+                <br>
+                <input type="checkbox" name="posicion" value="jefe"/>
+                <span>Jueves</span>
+                <br>
+                <input type="checkbox" name="posicion" value="jefe" checked/>
+                <span>Viernes</span>
+
+                <hr>
+                <span>Miembros de la familia (entre 1 y 5)</span>
+                <input type="number" name="nuumero" value="0" value="numero" min="1" max="5"/>
+            </article>   
+            <article>   
+                <hr>
+                <label>Selecciona el color de tu fachada:</label>
+                <br>
+                <input type="color" name="color"/>
+                <hr>
+            </article>
+            <article>
+                <label>Selecciona el color de tu garaje:</label>
+                <br>
+                <input type="color" name="color" value="#5AB600"/>
+                <hr>
+            </article>
+            <article>
+                <label>Dias libres :</label>
+                <br>
+                <select multiple name="opciones">
+                    <option value="Opcion1">Lunes</option>
+                    <option value="Opcion2">Martes</option>
+                    <option selected value="Seleccion">Miercoles</option>
+                    <option value="Opcion3">Jueves</option>
+                    <option value="Opcion4">Viernes</option>
+                </select>
+                <hr>
+            </article>
+            <article>
+                <label>Estas fuera todo el dia:</label>
+                <br>
+                <select size="1">
+                    <option value="Lunes">Lunes</option>
+                    <option value="Martes">Martes</option>
+                    <option selected value="Miercoles">Miercoles</option>
+                    <option value="Jueves">Jueves</option>
+                    <option value="Viernes">Viernes</option>
+                </select>
+            </article>
+            <article>
+                <label>Escoja una materia:</label>
+                <br>
+                <select>
+                    <optgroup label="Obligatorias">
+                        <option value="Matematicss">Matematicas</option>
+                        <option value="Lenguaje">Lenguaje</option>
+                    </optgroup>
+                    <optgroup label="Optativas">
+                        <option value="Cuerda y confeccion">Cuerda y confeccion</option>
+                        <option selected value="Astronomia">Astronomia</option>
+                    </optgroup>
+                </select>
+            </article>
+            <hr>
+            <input tabindex="1" type="submit" value="Enviar"/>
+            <input tabindex="2" type="reset" value="Restablecer"/>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+#ribeira_sacra {
+    visibility: hidden;
+    display: none;
+}
+
+#ribeira_sacra #catedrais {
+    padding-top: 100px;
+    position: relative;
+    
+}
+
+#cies {
+    object-position: left;
+    object-position: bottom;
+}
+
+img {
+    float: left;
+}
+
+p {
+    float: right;
+}
+
+#ribeira_sacra {
+    float: right;
+}
+
+#catedrais #cies {
+    float: left;
+}

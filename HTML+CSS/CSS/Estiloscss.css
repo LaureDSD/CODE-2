@@ -1,0 +1,39 @@
+p{
+    
+}
+
+nav li {
+    background-color: green;
+}
+
+#mesas h1 {
+    background-color: blue;
+        color: white;
+}
+
+section p a {
+    background-color: black;
+    color: white;
+}
+
+nav + section + section {
+    color: red;
+}
+
+* {
+    margin: 0px;
+}
+
+section {
+    color: red;
+}
+
+p:hover {
+    color: white;
+    background-color: green;
+}
+
+a:hover {
+    background-color: black;
+    color: white;
+}
