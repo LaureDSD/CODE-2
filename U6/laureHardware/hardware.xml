@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-15"?>
+<?xml-stylesheet type="text/xsl" href="hardware13.xsl"?>
+<hardware>
+	<impresoras>
+		<impresora id="i1">
+			<marca>HP</marca>
+			<modelo>LaserJetPro 400</modelo>
+			<precio>500.56</precio>
+			<colores>b/n</colores>
+		</impresora>
+	</impresoras>
+	<portatiles>
+	<portatil id="p2">
+			<marca>HP</marca>
+			<modelo>Pavilion 15-n017ss</modelo>
+			<precio>499</precio>
+			<precio>299.99</precio>
+			<configuracion>
+				<ram>6</ram>
+				<disco_duro>500</disco_duro>
+				<procesador>Intel® Core™ i3-3217U</procesador>
+			</configuracion>
+		</portatil>	
+	</portatiles>
+</hardware>

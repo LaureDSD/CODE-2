@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="1.xsl"?>
+<golosinas>
+	<golosina>
+		<nombre>nube</nombre>
+		<precio>0.7</precio>
+		<ingredientes>
+			<ingrediente>Azucar</ingrediente>
+			<ingrediente>acido nitrico</ingrediente>
+			<ingrediente>hidrocoloides</ingrediente>
+			<ingrediente>almidon</ingrediente>
+			<ingrediente>agua</ingrediente>
+		</ingredientes>
+		<fluctuacion>-0.01</fluctuacion>
+		<elaboracion>Cubrir una bandeja para pasteles con el almidón en polvo. Mezclar bien la gelatina con 25 ml de agua. </elaboracion>
+		<caduca>24/2/14</caduca>
+		<fabricado>2012-12-12</fabricado>
+		<hora>12:00:00</hora>
+	</golosina>
+	<golosina>
+		<nombre>pastillas de goma</nombre>
+		<precio>0.5</precio>
+		<ingredientes>
+			<ingrediente>Azucar</ingrediente>
+			<ingrediente>gelatina en polvo</ingrediente>
+			<ingrediente>almidon</ingrediente>
+			<ingrediente>agua</ingrediente>
+		</ingredientes>
+		<fluctuacion>-0.02</fluctuacion>
+		<elaboracion>Cubrir una bandeja      con la gelatina polvo. 
+		Mezclar bien el almidon y el agua. </elaboracion>
+		<caduca>24/2/14</caduca>
+		<fabricado>2009-12-30</fabricado>
+		<hora>23:55:15</hora>
+	</golosina>
+</golosinas>

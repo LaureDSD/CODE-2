@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="1.xsl"?>
+<alumnos>
+	<alumno expediente='exp27400-12'>
+		<nombre>Juan Antonio Colmenedo</nombre>
+		<ciclo nombre='ASIR' curso='2022/2023'/>
+		<evaluaciones>
+			<primera>
+				<notas>
+					<modulo nombre="LMSX" nota='5'></modulo>
+					<modulo nombre="SXBD" nota='7'></modulo>
+					<modulo nombre="FUHA" nota='10'></modulo>
+				</notas>
+			</primera>
+			<segunda>
+				<notas>
+					<modulo nombre="LMSX" nota='5'></modulo>
+					<modulo nombre="SXBD" nota='4'></modulo>
+					<modulo nombre="FUHA" nota='8'></modulo>
+				</notas>
+			</segunda>
+			<tercera>
+				<notas>
+					<modulo nombre="LMSX" nota='5'></modulo>
+					<modulo nombre="SXBD" nota='9'></modulo>
+					<modulo nombre="FUHA" nota='8'></modulo>
+				</notas>
+			</tercera>
+		</evaluaciones>
+	</alumno>
+	<alumno expediente='exp27400-15'>
+		<nombre>Rosario Flores</nombre>
+		<ciclo nombre='SMR' curso='2022/2023'/>
+		<evaluaciones>
+			<primera>
+				<notas>
+					<modulo nombre="LMSX" nota='3'></modulo>
+					<modulo nombre="SXBD" nota='5'></modulo>
+					<modulo nombre="FUHA" nota='6'></modulo>
+				</notas>
+			</primera>
+			<segunda>
+				<notas>
+					<modulo nombre="LMSX" nota='4'></modulo>
+					<modulo nombre="SXBD" nota='4'></modulo>
+					<modulo nombre="FUHA" nota='3'></modulo>
+				</notas>
+			</segunda>
+			<tercera>
+				<notas>
+					<modulo nombre="LMSX" nota='7'></modulo>
+					<modulo nombre="SXBD" nota='2'></modulo>
+					<modulo nombre="FUHA" nota='4'></modulo>
+				</notas>
+			</tercera>
+		</evaluaciones>
+	</alumno>	
+</alumnos>

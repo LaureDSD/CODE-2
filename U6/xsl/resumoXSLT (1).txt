@@ -1,0 +1,130 @@
+CAABECERA XSL >>> XML
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+ <xsl:output  method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
+</xsl:stylesheet>
+
+>>Estructura:
+<xsl:element name="empresa" use-attribute-sets="g_atributos_empresa">
+           <xsl:attribute name="denominacion">
+                     <xsl:value-of select="//denominacion"/>
+            </xsl:attribute>
+	<xsl:text disable-output-escaping="yes">SINGER</xsl:text>
+	<xsl:apply-templates select="//razon_social"/>
+</xsl:element>
+
+<xsl:attribute-set name="g-atributos_empresa">
+    <xsl:attribute name="empresa">EmpresaL</xsl:attribute>
+</xsl:attribute-set>
+
+
+
+CABECERA XSL >>> HTML
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" >
+<xsl:output method="html" indent="yes"/>
+</xsl:stylesheet>
+
+>>Estructura:
+
+<html>
+<head>
+<title>titulo</title>
+</head>
+
+<body bgcolor ="red">
+
+<h1>Titulo</h1>
+
+<table bordercolor="red" border="1" width="100%">
+	<thead>
+		<tr bgcolor ="red">
+			<tr>celdaA</tr>
+			<tr>celdaB</tr>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Celda1</td>
+			<td>Celda2</td>
+		</tr>
+	</tbody>
+
+</table>
+
+</body>
+</html>
+
+
+INICIO >>> <xsl:template match="/"></xsl:template>
+
+
+SELECCION >>>  
+<xsl:choose>
+                <xsl:when test="position() mod 2=0">
+                        <tr>
+				<td>Celda1</td>
+				<td>Celda2</td>
+			</tr>                       
+                </xsl:when>
+                <xsl:when test="position() mod 2!=0">
+			<tr>
+				<td>Celda3</td>
+				<td>Celda4</td>
+			</tr>  
+                </xsl:when>
+		<xsl:otherwhise>
+			//PUTA EL QUE LO LEA
+		</xsl:otherwhise>
+</xsl:choose>
+
+
+
+BUCLES >>>>
+<xsl:for-each select="//cd[compañia/@web]">
+
+</xsl:for-each>
+
+
+ORDENAR >>>>
+
+--Dentro de aply-templates ordena o interior.
+<xsl:sort data-type="text" order="ascending"  select="titulo and compañia"/>
+
+ select  indica el elemento por el que se va a ordenar
+ order  si se hará de forma ascendiente o descendente (ascending o descending)
+ data-type  tipo concreto de ordenación (number o text)
+ lang  lenguaje para la ordenación (código del lenguaje)
+ case-order si van primero las mayúsculas o las minúsculas (upper-first o lower-first)
+
+IF >>>
+
+<xsl:if test="año>1995">
+          <xsl:text disable-output-escaping="yes">&lt;br/&gt;</xsl:text>
+</xsl:if>
+
+VARIABLES >>>
+
+<xsl:variable name="total" as="" select="count(//cd)"/>
+<h4>Total: <font color="red">  <xsl:value-of select="$total"/> </font> </h4>
+
+CORTAR_CADENAS >>>
+
+<xsl:element name="localidad"><xsl:value-of select="substring-before(.,'-')"/>
+<xsl:element name="nombre"><xsl:value-of select="substring-after(.,'-')"/>
+
+CONCAT >>>
+
+<xsl:template match="/golosinas/golosina/ingredientes">
+          <xsl:value-of select="concat(.,' &lt;/&gt; ')"/>
+</xsl:template>
+   
+<xsl:template match="/golosinas/golosina/caduca">
+          <xsl:value-of disable-output-escaping="yes" select="concat(.,' &lt;br/&gt; ')"/>
+ </xsl:template>
+
+COMENTARIO >>>
+
+<xsl:comment></xsl:comment>

@@ -1,0 +1,136 @@
+
+ej0:
+
+
+
+ej1:
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+
+    	<xsl:template match="//impresora">
+    		<xsl:element name="printer"></xsl:element>
+    		<xsl:apply-templates select="marca"/>
+    			</xsl:template>
+
+    	<xsl:template match="//marca">
+   		 <xsl:element name="branch"></xsl:element>
+   			 </xsl:template>
+
+   	 <xsl:template match="//portatil">
+   		 <xsl:element name="laptop"></xsl:element>
+   		 <xsl:apply-templates select="marca"/>
+    			</xsl:template>
+</xsl:stylesheet>
+
+
+ej2:
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+
+    	<xsl:template match="//impresora">
+  		<element name="Printer"></element>
+  		<xsl:apply-templates select="marca"/>
+  			</xsl:template>
+  
+  	<xsl:template match="//marca">
+  		<xsl:element name="{@empresa}"/>
+  			</xsl:template>
+  
+  	<xsl:template match="//portatil">
+  		<xsl:element name="laptop"/>
+  		<xsl:apply-templates select="marca"></xsl:apply-templates>
+  			</xsl:template>
+</xsl:stylesheet>
+
+
+ej3:
+
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+
+    	<xsl:template match="//impresora">
+  		<element name="Printer"></element>
+  		<xsl:apply-templates select="marca"/>
+  			</xsl:template>
+  
+  	<xsl:template match="//marca">
+  		<xsl:element name="concat("texto:","{@empresa})"/>
+  			</xsl:template>
+  
+  	<xsl:template match="//portatil">
+  		<xsl:element name="laptop"/>
+  		<xsl:apply-templates select="marca"></xsl:apply-templates>
+  			</xsl:template>
+</xsl:stylesheet>
+
+
+
+ej4:
+
+
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+    
+	<xsl:template match="//impresora">
+  		<element name="Printer"></element>
+  		<xsl:apply-templates select="marca"/>
+  			</xsl:template>
+
+ 	 <xsl:template match="//marca">
+  		<xsl:element name="concat("texto:",{"@empresa}"/>
+  			</xsl:template>
+
+  	<xsl:template match="//portatil">
+  		<xsl:element name="laptop"/>
+  		<xsl:apply-templates select="marca"></xsl:apply-templates>
+  			</xsl:template>
+</xsl:stylesheet>
+
+
+ej5:
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+
+    	<xsl:template match="/">
+    		<xsl:element name="stock">
+  		<xsl:attribute name="empresa"></xsl:attribute>
+  		<xsl:attribute name="fecha"></xsl:attribute>
+    			</xsl:element>
+    	</xsl:template>
+</xsl:stylesheet>
+
+
+ej6:
+
+
+Ej7:
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+    
+    <xsl:template match="/">
+      <xsl:element name="stock" use-attribute-sets="g_atributos_empresa">
+          <xsl:apply-templates></xsl:apply-templates>
+    </xsl:element>
+    </xsl:template>
+    
+    
+     <xsl:template match="//impresoras/impresora">
+      <xsl:element name="modelo">
+      <xsl:value-of select="modelo"></xsl:value-of>
+      </xsl:element>
+      </xsl:template>
+    
+    
+    
+    <xsl:attribute-set name="g-atributos_empresa">
+    <xsl:attribute name="empresa">EmpresaL</xsl:attribute>
+          <xsl:attribute name="fecha">FechaN</xsl:attribute>
+    </xsl:attribute-set>
+
+</xsl:stylesheet>

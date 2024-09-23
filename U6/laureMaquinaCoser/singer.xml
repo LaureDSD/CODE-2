@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="maquina2.xsl"?>
+<singer web="http://www.singer.es/">
+	<inicio>Desde hace más de 160 años, Singer fabrica máquinas de coser capaces de satisfacer las exigencias de
+sus clientes. Te invitamos a navegar por nuestro sitio para descubrir las características y las fantásticas posibilidades
+que te ofrecen las máquinas de coser Singer. Buena navegación y gracias por haber escogido Singer</inicio>
+	<razon_social>
+		<denominacion>SVP Europe SpA – Suc. España</denominacion>
+		<direccion>Avda. Diagonal 429 Planta 3 – 08036 (Barcelona)</direccion>
+		<telefono>91 711 9357</telefono>
+		<email>infospain@europe.svpworldwide.com</email>
+		<registro_mercantil>Registro Mercantil de Barcelona - Tomo 42016 * Folio 189 – Hoja B-399243 - Inscripción 1ª</registro_mercantil>
+		<nif>W0054416C</nif>
+	</razon_social>
+	<historia>
+		<resumen>En 2001 Singer celebró un aniversario particular: habían pasado 150 años del día en el cual Isaac Singer obtuvo la patente de la primera máquina de coser.
+Era la fecha de nacimiento oficial de Singer, que inmediatamente se convirtió en líder del sector, obteniendo pronto resultados muy respetables. Singer ha sabido mantener este liderazgo hasta hoy, gracias a un empeño continuo en todos los aspectos de su trabajo: calidad, fiabilidad, innovación y asistencia.
+En el texto siguiente, cada fecha recuerda un momento significativo de estos 150 años llenos de innovaciones; años que vieron el crecimiento continuo de Singer y de toda la industria de las máquinas de coser.    </resumen>
+		<cronologia>
+			<etapa año="1811" imagen="http://www.singer.es/assets/images/FOTO%20STORIA/issac.jpg">Isaac Merrit Singer nace en Schaghiticoke, en el estado de Nueva York.</etapa>
+			<etapa año="1850" imagen="http://www.singer.es/assets/images/FOTO%20STORIA/1850.jpg">En Boston, Orson C. Phelps costruye máquinas de coser bajo licencia de John A. Lerow. La máquina de Lerow y Blodgett no es demasiado funcional. El movimiento circular de la lanzadera provoca una torsión del hilo en cada rotación. Isaac Merrit Singer, tras examinar la máquina, observa: "en lugar de hacer que la lanzadera siga un movimiento circular, yo la haría moverse hacia adelante y hacia atrás en línea recta.  En lugar de la barra para agujas que empuja horizontalmente una aguja curva, yo usaría una aguja recta y la haría trabajar en vertical, subiendo y bajando. Después de 11 días de trabajo y un costo de cuarenta dólares, Singer terminó su invención: la primera máquina de coser propiamente dicha. El modelo tenía una aguja recta con el ojo elíptico, y una lanzadera transversal, un brazo en suspensión, un plano de apoyo del cabezal, un pie que sujeta el tejido evitando que sea arrastrado hacia arriba de la aguja y una rueda áspera para el avance de la tela, que sobresale por una ranura del plano de apoyo. Unos engranajes especiales comunican el movimiento al brazo de la aguja y la lanzadera. También es de Singer la idea de utilizar un pedal de pie similar al de una rueca manual. Todas las máquinas anteriores generaban la fuerza manualmente , con el uso de una manivela</etapa>
+			<etapa año="1851" imagen="http://www.singer.es/assets/images/FOTO%20STORIA/1851.jpg">Una vez obtenida la patente para la primera máquina de coser de doble puntada, Isaac Merrit Singer funda la I.M. Singer &amp; Company junto con Edward C. Clark, un abogado de Nueva York. La Singer Sewing Machine se comercializa en todo Estados Unidos. Sin haber transcurrido todavía dos años, la Singer es la mayor compañía norteamericana en el sector de la producción y comercialización de máquinas de coser.</etapa>
+			<etapa año="1852">Singer patenta un dispositivo para la tensión del hilo.</etapa>
+			<etapa año="1853" imagen="http://www.singer.es/assets/images/FOTO%20STORIA/1853.jpg">La I.M. Singer &amp; Co. abre una filial y una planta de producción en la ciudad de Nueva York. La sociedad cambia de nombre, tomando el de Singer Manufacturing Company. Las primeras máquinas de coser Singer, construidas en Nueva York, se venden a 100 dólares la unidad.</etapa>
+			<etapa año="1855" imagen="http://www.singer.es/assets/images/FOTO%20STORIA/1855.jpg">Singer se convierte en la primera empresa mundial en el campo de la costura a máquina. Su expansión intercontinental comienza en París. Singer es la primera empresa verdaderamente multinacional. Una máquina de coser Singer gana el primer premio en el Feria Mundial de París.</etapa>
+			<etapa año="1856">Edward Clark propone por primera vez, el "alquiler con opción a compra", el prototipo de todas las compras con una señal y pagos aplazados. Es una solución que permite adquirir una máquina de coser Singer también a quien no dispone de todo el capital. Mejor incluso, permite a cualquiera mejorar su propia productividad, ganar más dinero y elevar su posición social. Se presenta la máquina de coser "Turtleback". Se abre una filial en Glasgow, Escocia.</etapa>
+			<etapa año="1857" imagen="http://www.singer.es/assets/images/FOTO%20STORIA/1857.jpg">Esta era la casa madre Singer, con la primera exposición, en el 458 de Broadway, Ciudad de Nueva York.</etapa>
+			<etapa año="1858" imagen="http://www.singer.es/assets/images/FOTO%20STORIA/1858.jpg">Se presenta la primera máquina ligera para uso doméstico, el modelo "Grassshopper". Las ventas llegaron a las 3.000 unidades al año. Singer abre tres plantas de producción en la ciudad de Nueva York. Las actividades de Singer se expanden también a Brasil.</etapa>
+			<etapa año="1859">Singer recibe la primera de las tres patentes para máquinas de punto de cadeneta con lanzadera por vibración.</etapa>
+			<etapa año="1861">Por primera vez, las ventas al extranjero superan a las de los Estados Unidos</etapa>
+			<etapa año="1863" imagen="http://www.singer.es/assets/images/FOTO%20STORIA/1863.jpg">La sociedad se registra como Singer Manufacturing Company, posee 22 patentes y su capital invertido es de 550.000 dólares. Vende más de 20.000 máquinas de coser al año. Se abre una filial en Alemania, en Hamburgo.</etapa>
+			<etapa año="1865" imagen="http://www.singer.es/assets/images/FOTO%20STORIA/1865.jpg">Se presenta el modelo "New Family".</etapa>
+			<etapa año="1866">Singer patenta una máquina de coser con lanzadera oscilante.</etapa>
+			<etapa año="1867">Singer abre su primera fábrica fuera de los Estados Unidos: es en Escocia, en Glasgow.</etapa>
+			<etapa año="1868">En South Bend, Indiana, se abre una empresa dedicada a la producción de muebles.</etapa>
+			<etapa año="1870" imagen="http://www.singer.es/assets/images/FOTO%20STORIA/1870_2.jpg">La Singer Company vende 170.000 máquinas. La Singer Manufacturing Company abre centros de distribución y venta en Inglaterra. Se estrena la marca con la chica y la "S" roja. Editada en diferentes lenguas, se convierte en una de las marcas más conocidas del mundo.</etapa>
+			<etapa año="1871">La fábrica de Bridgton se convierte en la mayor de Inglaterra. Las ventas alcanzan las 180.000 unidades al año.</etapa>
+			<etapa año="1872" imagen="http://www.singer.es/assets/images/FOTO%20STORIA/1872.jpg">Elizabethport, en Nueva Jersey, alberga las mayores y más modernas instalaciones productivas.</etapa>
+			<etapa año="1873">Con la apertura oficial del establecimiento de Elizabethport, Singer Manufacturing Company se convierte en una compañía de Nueva Jersey, con un estatus especial. Se inicia la producción en Canadá.</etapa>
+			<etapa año="1875">I.M.Singer muere en Torquay, Inglaterra, a la edad de 63 años.</etapa>
+			<etapa año="1880">Un motor eléctrico Edison acciona una máquina de coser. En todo el mundo, las ventas de máquinas de coser Singer superan las 500.000 unidades. Se abren nuevos establecimientos en los Estados Unidos.</etapa>
+			<etapa año="1881">Se abre la filial de Cairo, Illinois</etapa>
+			<etapa año="1882">Se establecen plantas de producción en Montreal, en el estado canadiense de Quebec, y en Floridsdorf, en Austria.</etapa>
+			<etapa año="1883" imagen="http://www.singer.es/assets/images/FOTO%20STORIA/1883.jpg">Para poder responder a la siempre creciente demanda europea, Singer inaugura la mayor fábrica de máquinas de coser del mundo en Kilbowie, Escocia. Allí trabajan 12.000 empleados. Es conocida por su torre del reloj, la segunda del mundo, de más de 60 metros.</etapa>
+			<etapa año="1884" imagen="http://www.singer.es/assets/images/FOTO%20STORIA/1884.jpg">Los Estados Unidos reciben el presente de la estatua de la libertad, de la cual se dice que fue modeladas según la fisonomía de Isabella Singer.</etapa>
+			<etapa año="1889">Singer produce la primera máquina de coser eléctrica.</etapa>
+			<etapa año="1890" imagen="http://www.singer.es/assets/images/FOTO%20STORIA/1890.jpg">Singer vende el 80 por ciento del mercado mundial de máquinas de coser.</etapa>
+			<etapa año="1891">Por vez primera, un motor eléctrico acciona una máquina de coser de uso doméstico</etapa>
+			<etapa año="1892">Singer desarrolla una máquina de coser en zig-zag destinada al uso doméstico</etapa>
+			<etapa año="2001">Singer celebra su 150 aniversario. Singer presenta en todo el mundo las máquina doméstica más avanzada para coser y bordar: la QUANTUM ® XL-5000. Una máquina que ofrece características futuristas, como el enhebrado completamente automático, carrete autorrecargable y el programa Profesional Sew-Ware™ de última generación. Se trata del modelo más potente y más funcional que se encuentra actualmente en el mercado.</etapa>
+			<etapa año="2005" imagen="http://www.singer.it/assets/images/Futura1.jpg">Singer presenta FUTURA, el "ordenador del bordado": la máquina doméstica de coser y bordar que borda con ayuda del ordenador. Una máquina que ofrece un programa de serie que permite convertir archivos de imagen en bordados y gestionar el bordado como un periférico, gracias a la conexión de la máquina al PC por medio del cable USB.</etapa>
+			<etapa año="2011">Singer festeja sus 160 años de historia con un modelo "vintage": la 160 Anniversary. Una máquina que recuerda el pasado pero que está a la altura de los tiempos gracias al panel computarizado de selección de las puntadas.</etapa>
+		</cronologia>
+	</historia>
+	<productos>
+		<producto tipo="electronicas" gama="Quantum Stylist" modelo="9960" foto="http://www.singer.es/assets/cache/1543-item-398-273-Quantum%20Stylist%209960.jpg">
+			<caracteristicas>Máquina de coser electrónica //Efecto espejo e imagen invertida//Selector de aguja doble//
+    Estira la puntada fina hasta 5 veces (para puntadas completas)//Estira la puntada fina hasta 2 veces (para puntadas decorativas)//
+    14 señales de alarma visuales con efecto sonoro que incluyen//Sensor superior rotura del hilo; Tensión electrónica regulable
+2 luces LED; 26 posiciones de la aguja//Palanca del prensatela con 2 niveles de elevación//Brazo extraíble con soporte accesorios
+Enhebrado automático de la aguja//Ojales de una vez totalmente automáticos</caracteristicas>
+			<precio>595,00 euros</precio>
+		</producto>
+		<producto tipo="electronicas" gama="Stylist" modelo="9100" foto="http://www.singer.es/assets/cache/1530-item-398-273-9100%20mesa.jpg">
+			<caracteristicas>Máquina de coser electrónica //210 tipos de puntada de selección rápida:13 Básicas.4 Elásticas.184 Decorativas
+9 ojales automáticos//Enhebrado automático de la aguja.//Mesa para acolchados.Botón Start &amp; Stop.
+Control de velocidad.</caracteristicas>
+			<precio>699 euros</precio>
+		</producto>
+		<producto tipo="bordadoras" gama="Futura" modelo="XL-550" foto="http://www.singer.es/assets/cache/1587-item-398-273-FUTURA%20XL-550%20Beauty%20with%20Embroidery%20Project%20-%20Lo%20Res.jpg">
+			<caracteristicas>Software compatible con Windows XP, Vista, 7 (no se incluye el PC) actualizable a windows 8
+215 tipos de puntada; 2 tipos de ojales; Selección digital del punto
+Display LCD; Dos bastidores de bordado incluidos //Marco grande (260 x 160 mm) y pequeño (100 x 100 mm) //Comunicación directa con la máquina a través de cable USB; 6 luces LED - función programable aguja arriba / abajo
+palanca apertura mandíbula inferior//sistema de enhebrado de aguja simplificado SwiftSmart ™//Sistema rápido de enhebrado del hilo Drop &amp; Sew ™
+Software básico incluido; 20 tipos diferentes de letras de bordado
+125 diseños de bordado incluidos</caracteristicas>
+			<precio>874 dolares</precio>
+		</producto>
+		<producto tipo="bordadoras" gama="Futura" modelo="XL-400" foto="http://www.singer.es/assets/cache/1581-item-398-273-XL400_p.jpg">
+			<caracteristicas>Software compatible con Windows XP, Vista, 7 (no se incluye el PC) actualizable a windows 8
+30 tipos de puntada; 2 tipos de ojales; Selección digital del punto
+Dos bastidores de bordado incluidos Marco grande (260 x 160 mm) y pequeño (100 x 100 mm); Comunicación directa con la máquina a través de cable USB
+6 luces LED; Función programable aguja arriba / abajo Palanca apertura mandíbula inferior Sistema de enhebrado de aguja simplificado SwiftSmart ™
+Sistema rápido de enhebrado del hilo Drop &amp; Sew ™ Software básico incluido; 5 tipos diferentes de letras de bordado 125 diseños de bordado incluidos</caracteristicas>
+			<precio>580 dolares</precio>
+		</producto>
+		<producto tipo="mecánicas" gama="Inspiration" modelo="4210" foto="http://www.singer.es/assets/cache/1600-item-398-273-INSPIRATION_4210.jpg">
+			<caracteristicas>21 operaciones de costura //Puntos elásticos//Ojal automático en 4 tiempos
+Brazo abierto //Cubierta blanda</caracteristicas>
+			<precio>180 euros</precio>
+		</producto>
+		<producto tipo="remalladoras" gama="" modelo="14SH754" foto="http://www.singer.es/assets/cache/1786-item-398-273-TAGLIA_14SH754.jpg">
+			<caracteristicas>Remalladora con diferencial //4 hilos //Con pasahilos//Brazo abierto.</caracteristicas>
+			<precio>400 euros</precio>
+		</producto>
+		<producto tipo="electrodomesticos" gama="Quita pelusas" modelo=" BSM 203" foto="http://www.singer.es/assets/cache/1701-item-398-273-OK_BSM203.jpg">
+			<caracteristicas>Quita de forma rápida y fácil las pelusas e hilachas que aparecen en la superficie de los tejidos de lana y algodón, revitalizándolos y dejándolos como nuevos.
+Compacto, ligero y práctico.
+Se puede utilizar en cualquier lugar, en casa o de viaje</caracteristicas>
+			<precio>15 euros</precio>
+		</producto>
+		<producto tipo="electrodomesticos" gama="Plancha" modelo=" SNG 5.22" foto="http://www.singer.es/assets/cache/1761-item-398-273-SNG%205_22_394.jpg">
+			<caracteristicas>Potencia 2200W / /Suela plancha de cerámica//Capacidad depósito 250 ml // Apagado automático / función auto-stop en 3 posiciones
+Sistema de auto-limpieza //Vapor vertical //Sistema antigoteo //Sistema antical</caracteristicas>
+			<precio>25 euros</precio>
+		</producto>
+		<producto tipo="electrodomesticos" gama="Aspirador" modelo=" SVCB4527 ECO" foto="http://www.singer.es/assets/cache/2532-item-398-273-SVCB%204527%20ECOlowres.jpg">
+			<caracteristicas>•Modelo: Con bolsa •Dimensión: 45 cm •Motor: Softstart + ECO •(Menor consumo de energía- Mayor potencia de aspiración)
+•Consumo: max 1600W •Potencia de aspiración: max 420W •Bolsa: bolsa Singer (3 incluidas) •Capacidad bolsa: 2.5lt •Filtro: HEPA 13 lavable
+•Nivel de ruido: &lt;69db •Accesorios incluidos: boquillas de aspiración, para ranuras y para tapicerías</caracteristicas>
+			<precio>110 euros</precio>
+		</producto>
+		<producto tipo="electrodomesticos" gama="Generador de vapor" modelo="SHG2026" foto="http://www.singer.es/assets/cache/1743-item-398-273-ok_SHG2026B.jpg">
+			<caracteristicas>Reduce notablemente el tiempo de planchado. El SHG 2026B mantendrá sus prendas de vestir y tejidos delicados siempre cuidados dando un toque profesional al cuidado de su ropa.</caracteristicas>
+			<precio>112,29 euros</precio>
+		</producto>
+		<producto tipo="electrodomesticos" gama="Sistema de acabado para tejidos" modelo="SWP" foto="http://www.singer.es/assets/cache/1773-item-398-273-SWPp_1.jpg">
+			<caracteristicas>Nuevo sistema SWP de acabado para tejidos
+Listo en solo 45 segundos Ofrece 90 minutos de vapor constante y delicado Su plancha en acero Su placa de plancha con boquillas quita rápida y fácilmente las arrugas de la ropa, las cortinas y la tapicería
+El colgador para vestidos con rotación de 360 grados permite utilizar el vapor en cualquier ángulo de la prenda Sus accesorios le permiten obtener resultados de calidad en sus tejidos..</caracteristicas>
+			<precio>130 euros</precio>
+		</producto>
+		<producto tipo="electrodomesticos" gama="Tabla de planchar" modelo="SB1040" foto="http://www.singer.es/assets/cache/1779-item-398-273-SB1040p.jpg">
+			<caracteristicas>La tabla de planchar SB1040 ha sido diseñada para facilitar todo tipo de planchado. La práctica superficie de aluminio con calefacción quita la humedad de las prendas con una corriente suave de aire, permitiendo de este modo que los pliegues más difíciles puedan ser planchados con mayor facilidad.</caracteristicas>
+			<precio>350 euros</precio>
+		</producto>
+	</productos>
+	<distribuidores>
+		<distribuidor region="GALICIA">
+			<nombre>
+Gonzalo Mosteiro Louzao</nombre>
+			<localidad>A coruña</localidad>
+		</distribuidor>
+		<distribuidor region="GALICIA">
+			<nombre>Mativer S.L.</nombre>
+			<localidad>Ourense</localidad>
+		</distribuidor>
+		<distribuidor region="ASTURIAS">
+			<nombre>Marta Elena Gonzalez Sanchez</nombre>
+			<localidad>Gijón</localidad>
+		</distribuidor>
+		<distribuidor region="CEUTA">
+			<nombre>Bienvenido Lladó Diaz</nombre>
+			<localidad>Ceuta</localidad>
+		</distribuidor>
+	</distribuidores>
+	<sat nombre="RADIO DE LA TORRE S.L." localidad="Orense"/>
+	<sat nombre="RAMFOR (Jose Ramon Rodriguez Saavedra)" localidad="Pontevedra"/>
+	<sat nombre="LADYSIGMA SLU" localidad="La Coruña"/>
+	<contactos>
+		<contacto tipo="Canal Tradicional." nombre="Rafael Maratalla" email="rafael.moratalla@europe.svpworldwide.com"/>
+		<contacto tipo="Canal Gran Distribución" nombre="Rubén Mánzano Cánovas" email="ruben.manzano@europe.svpworldwide.com"/>
+		<contacto tipo="Servicio de Atención al Cliente" email="infospain@europe.svpworldwide.com"/>
+	</contactos>
+</singer>

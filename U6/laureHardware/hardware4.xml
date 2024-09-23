@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="iso-8859-15"?>
+<?xml-stylesheet type='text/xsl' href='hardware15.xsl'?>
+<hardware>
+	<impresoras>
+		<impresora id="i1">
+			<marca empresa="HP"/>
+			<modelo>LaserJetPro 400</modelo>
+			<precio>500.56</precio>
+			<colores>b/n</colores>
+		</impresora>
+		<impresora id="i10">
+			<marca empresa="BROTHER"/>
+			<modelo>HL-2135W</modelo>
+			<precio>89.99</precio>
+			<colores>b/n</colores>
+		</impresora>
+	</impresoras>
+	<portatiles>
+		<portatil id="p1" garantia="2">
+			<marca empresa="HP"/>
+			<modelo>Ultrabook HP 13,3"</modelo>
+			<precio>1399</precio>
+			<precio>299.99</precio>
+			<configuracion>
+				<ram>4</ram>
+				<disco_duro>500</disco_duro>
+				<disco_duro>750</disco_duro>
+				<procesador>Intel Core i5 4200U</procesador>
+			</configuracion>
+		</portatil>	
+	</portatiles>
+</hardware>

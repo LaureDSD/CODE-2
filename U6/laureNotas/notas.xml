@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="notas6.xsl"?>
+<alumnos>
+	<alumno expediente="exp27400-12">
+		<nombre>Juan Antonio Colmenedo</nombre>
+		<evaluaciones>
+			<primera>
+				<notas>
+					<modulo nombre="LMSX" nota="5"/>
+					<modulo nombre="SXBD" nota="7"/>
+					<modulo nombre="FUHA" nota="8"/>
+				</notas>
+			</primera>
+			<segunda>
+				<notas>
+					<modulo nombre="LMSX" nota="5"/>
+					<modulo nombre="SXBD" nota="4"/>
+					<modulo nombre="FUHA" nota="8"/>
+				</notas>
+			</segunda>
+			<tercera>
+				<notas>
+					<modulo nombre="LMSX" nota="5"/>
+					<modulo nombre="SXBD" nota="9"/>
+					<modulo nombre="FUHA" nota="8"/>
+				</notas>
+			</tercera>
+		</evaluaciones>
+	</alumno>
+	<alumno expediente="exp27400-15">
+		<nombre>Rosario Flores </nombre>
+		<evaluaciones>
+			<primera>
+				<notas>
+					<modulo nombre="LMSX" nota="5"/>
+					<modulo nombre="SXBD" nota="3"/>
+					<modulo nombre="FUHA" nota="1"/>
+				</notas>
+			</primera>
+			<segunda>
+				<notas>
+					<modulo nombre="LMSX" nota="10"/>
+					<modulo nombre="SXBD" nota="8"/>
+					<modulo nombre="FUHA" nota="8"/>
+				</notas>
+			</segunda>
+			<tercera>
+				<notas>
+					<modulo nombre="LMSX" nota="9"/>
+					<modulo nombre="SXBD" nota="9"/>
+					<modulo nombre="FUHA" nota="7"/>
+				</notas>
+			</tercera>
+		</evaluaciones>
+	</alumno>
+</alumnos>
