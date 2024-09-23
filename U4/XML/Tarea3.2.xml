@@ -1,0 +1,29 @@
+<libros>
+    <libro>
+    <titulo>Por que fracasan los paises
+    </titulo>
+    <autor>Daron-James</autor>
+    <editorial>Deustro</editorial>
+    <isbn>078-84-234-1266-2</isbn>
+    <paginas>600</paginas>
+    </libro>
+    
+    <libro>
+    <titulo>Dime quien soy
+    </titulo>
+    <autor>Julia Navarro</autor>
+    <editorial>PJ</editorial>
+    <isbn>988-4444-444-1</isbn>
+    <paginas>1100</paginas>
+    </libro>
+    
+    <libro>
+    <titulo>La caida de los gigantes
+    </titulo>
+    <autor>Ken Follet</autor>
+    <editorial>PJ</editorial>
+    <isbn>9788401337635</isbn>
+    <paginas>1124</paginas>
+    </libro>
+    
+</libros>

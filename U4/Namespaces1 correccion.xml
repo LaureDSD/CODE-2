@@ -1,0 +1,80 @@
+<?xml version="1.1" encoding="utf-8"?>
+
+<centro xmlns="http://www.centro.com/espazosdenomes/centro/"
+xmlns:cl="http://www.ciclo.com/espazosdenomes/ciclo/"
+xmlns:md="http://www.modulo.com/espazosdenomes/modulo/"
+xmlns:al="http://www.alumno.com/espazosdenomes/alumno/">
+<cl:ciclos>\
+    
+<cl:ciclo id="ASIR" grao="CS">
+
+<al:alumnos>
+
+<al:alumno>
+
+<al:nome>Xoan</al:nome>
+
+<al:apelidos>Cancedo da Foz</al:apelidos>
+
+<al:ciclo>ASIR ordinario</al:ciclo>
+
+<al:curso>1º</al:curso>
+
+<al:datanacemento>06/11/1991</al:datanacemento>
+
+<al:nota>Xa fixo outro ciclo</al:nota>
+    
+<al:módulo id="MP0370"></al:módulo>
+<al:módulo id="MP0371"></al:módulo>
+    
+    
+</al:alumno>
+
+<al:alumno>
+    
+<al:nome>Xoancho</al:nome>
+
+<al:apelidos>Can da Fozes</al:apelidos>
+
+<al:ciclo>ASIR ordinario</al:ciclo>
+
+<al:curso>1º</al:curso>
+
+<al:datanacemento>06/11/1991</al:datanacemento>
+
+<al:nota>Xa fixo outro ciclo</al:nota>
+    
+<al:módulo id="MP0370"></al:módulo>
+<al:módulo id="MP0371"></al:módulo>
+    
+</al:alumno>
+
+</al:alumnos>
+    
+<md:módulos>
+    
+<md:módulo id="MP0370">
+
+<md:nome>Planificación e administración de redes</md:nome>
+
+<md:horas>213</md:horas>
+
+</md:módulo>
+<md:módulo id="MP0371">
+
+<md:nome>Fundamentos hardware</md:nome>
+
+<md:horas>107</md:horas>
+
+</md:módulo>
+    
+</md:módulos>
+    
+</cl:ciclo>
+
+<cl:ciclo id="DAW" grao="CS">
+
+</cl:ciclo >
+
+</cl:ciclos>
+</centro>

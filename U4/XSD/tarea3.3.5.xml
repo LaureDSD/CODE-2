@@ -1,0 +1,922 @@
+
+/* a) Tarefa 5_a */
+
+<!xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<edificio alquiler="verdadeiro" valor="410.50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance&quot";
+xsi:noNamespaceSchemaLocation="tarefaUD7_5a.xsd">
+
+<enderezo>
+
+<rua>Ponzano</rua>
+
+<numero>66</numero>
+
+<poboacion>Madrid</poboacion>
+
+<provincia>Madrid</provincia>
+
+<codigoPostal>28003</codigoPostal>
+
+</enderezo>
+
+<dataConstrucion mes="Febreiro" ano="1989" />
+
+<material>formigón</material>
+
+</edificio>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchemaEDIFICIO">
+    
+    
+    /* EDIFICIO */
+    <xs:element name="edificio">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="enderezo" type="tipoenderezo"/>
+                <xs:element name="dataConstruccion" type="tipodataconstruccion"/>
+                <xs:element name="material" type="xs:string" minOccurs="0"/>
+            </xs:sequence>
+                <xs:attribute name="valor" type="tipovalor"/>
+                <xs:attribute name="alquiler" type="xs:boolean" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    /* Simple edificio */
+    <xs:simpleType name="tipovalor">
+        <xs:restriction base="xs:unsignedShort">
+            <xs.fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    
+    
+    
+    /* EMDEREZO */
+    <xs:element name="tipoenderzo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="rua" type="xs:string"/>
+                <xs:element name="numero" type="tiponumero"/>
+                <xs:element name="poboacion" type="xs:string"/>
+                <xs:element name="provincia" type="xs:string"/>
+                <xs:element name="codigopostal" type="tipopostal"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element> 
+    /* Simple enderezo */
+    <xs:simpleType name="tiponumero">
+        <xs:restriction base="xs:unsignedShort">
+            <xs:maxInclusive value="2000"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tipopostal">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{5}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+     
+    /* DATA CONSTRUCCION */
+    <xs:element name="tipodataconstruccion">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="mes" type="tipomes" use="required"/>
+                <xs:element name="ano" type="xs:Year" use="required"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element> 
+    /* Simple construccion */    
+    <xs:simpleType name="tipoano">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="enero"/>
+            <xs:enumeration value="todos los meses intermedios"/>
+            <xs:enumeration value="diciembre"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+</xs:schema>
+
+
+
+
+
+
+
+
+/* a) Tarefa 5_b */
+
+<?xml version="1.0" encoding="UTF-8"?>
+<empresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="tarefaUD7_5b.xsd">
+<empregado>
+<nss>272727272727</nss>
+<nome>Iria</nome>
+<departamento>IFC</departamento>
+<contactos>999888777 987987789</contactos>
+</empregado>
+<empregado>
+<nss>151515151515</nss>
+<nome>Mariña</nome>
+<departamento>IFC</departamento>
+<contactos>989898989 987654321 978787878</contactos>
+</empregado>
+<empregado>
+<nss>272727363636</nss>
+<nome>Xoel</nome>
+<departamento>CON</departamento>
+</empregado>
+<departamento codigo="IFC" xefe="272727363636">
+<nome>Informática</nome>
+</departamento>
+<departamento codigo="CON" xefe="272727272727">
+<nome>Contabilidade</nome>
+</departamento>
+</empresa>
+
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchemaEMPRESA">
+    
+    /* EMPRESA */
+    <xs:element name="empresa">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="empregado" type="tipoempregado" maxOccurs="200"/>
+                <xs:element name="departamento" type="tipodepartamento" maxOccurs="8"/>
+            </xs:sequence>
+        </xs:complexType>
+        <xs:key name="departamentoUnico">
+            <xs:selector xpath="departamento"/>
+            <xs:field xpath="@codigo"/>
+        </xs:key>
+        <xs:keyref name="departamentoPertenece" refer="departamentoUnico">
+            <xs:selector xpath="empregado"/>
+            <xs:field xpath="departamento"/>
+        </xs:keyref>
+        
+         <xs:key name="xefeUnico">
+            <xs:selector xpath="empregado"/>
+            <xs:field xpath="nss"/>
+        </xs:key>
+        <xs:keyref name="departamentoXefe" refer="xefeUnico">
+            <xs:selector xpath="departamento"/>
+            <xs:field xpath="@xefe"/>
+        </xs:keyref>
+    </xs:element>
+
+
+
+    /* EMPREGADO */
+    <xs:element name="tipoempregado">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nss" type="tiponss"/>
+                <xs:element name="nome" type="xs:string"/>
+                <xs:element name="departamento" type="tipocodigodepartamento"/>
+                <xs:element name="contactos" type="tipocontacto" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    /* Simple empregado */
+    <xs:simpleType name="tiponss">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{12}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="tipocontacto">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([0-9]{9} ){0,4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    /* DEPARTAMENTO */
+    <xs:element name="tipodepartamento">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nome" type="xs:string"/>
+            </xs:sequence>
+             <xs:attribute name="codigodepartamento" type="tipocodigodepartamento" use="required"/>
+            <xs:attribute name="xefe" type="tiponss" use="required" />
+        </xs:complexType>
+    </xs:element>
+    /* Simple departamento */
+    <xs:simpleType name="tipocodigodepartamento">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="IFC"/>
+            <xs:enumeration value="CON"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+</xs:schema>
+
+
+
+
+
+
+
+
+/* Tarefa 5_c */
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<reinados>
+
+<reinado dende="1808-03-19" ata="1808-05-06">
+
+<rei codigo="HF12"/>
+
+</reinado>
+
+<reinado dende="1808-06-06" ata="1813-12-11">
+
+<rei codigo="PB02"/>
+
+<consorte dende="1808-06-06" ata="1813-12-11">
+
+Julia Clary
+
+</consorte>
+
+</reinado>
+
+<reinado dende="1833-09-29" ata="1833-09-29">
+
+<rei codigo="HF12"/>
+
+<consorte dende="1808-08-11" ata="1813-12-11">
+
+María Josefa de Sajonia
+
+</consorte>
+
+<consorte dende="1813-12-11" ata="1833-09-29">
+
+María Cristina de Borbón-Dos Sicilias
+
+</consorte>
+
+</reinado>
+
+<reinado dende="1833-08-11" ata="1868-09-30">
+
+<raiña codigo="MB10"/>
+
+<consorte dende="1833-09-29" ata="1868-09-30">
+
+Francisco de Asís de Borbón
+
+</consorte>
+
+</reinado>
+
+<reinado dende="1870-11-16" ata="1873-02-11">
+
+<rei codigo="HA87"/>
+
+<consorte dende="1870-11-16" ata="1873-02-11">
+
+María Victoria del Pozzo de la Cisterna
+
+</consorte>
+
+</reinado>
+
+<persoa codigo="MB10">
+
+<nome>Isabel II</nome>
+
+<apodo>a dos Tristes Destiños</apodo>
+
+<pai>HF12</pai>
+
+<nai>MC32</nai>
+
+<casa>Borbón</casa>
+
+</persoa>
+
+<persoa codigo="HF12">
+
+<nome>Fernando VII</nome>
+
+<apodo>o rei Felón</apodo>
+
+<apodo>o desexado</apodo>
+
+<casa>Borbón</casa>
+
+</persoa>
+
+<persoa codigo="HA87">
+
+<nome>Amadeo I</nome>
+
+<apodo>o rei cabaleiro</apodo>
+
+<casa>Saboya</casa>
+
+</persoa>
+
+<persoa codigo="PB02">
+
+<nome>José I</nome>
+
+<apodo>Pepe Botella</apodo>
+
+<casa>Bonaparte</casa>
+
+</persoa>
+
+</reinados>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchemaREIANDOS">
+    
+/*REINADOS*/
+<xs:element name="reinados">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="reinado" type="tiporeinado" maxOccurs="unbounded"/>
+                <xs:element name="persoa" type="tipopersona" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    
+     <xs:key name="personaUnica">
+            <xs:selector xpath="persoa"/>
+            <xs:field xpath="@codigo"/>
+        </xs:key>
+    
+        <xs:keyref name="rei_reina" refer="personaUnica">
+            <xs:selector xpath="reina"/>
+            <xs:field xpath="persona"/>
+        </xs:keyref>
+    
+    <xs:keyref name="rei_reina" refer="personaUnica">
+            <xs:selector xpath="rei"/>
+            <xs:field xpath="persona"/>
+        </xs:keyref>
+    
+    <xs:unique name="nomeReinado">
+        <xs:selector xpath="persoa"/>
+        <xs:field xpath="nome"/>
+    </xs:unique>
+    
+    </xs:element>
+
+
+/*REINADO*/
+<xs:element name="reinado">
+        <xs:complexType>
+            <xs:sequence>
+            <xs:choice>
+                <xs:element name="rei" type="tiporei"/>
+                <xs:element name="raina" type="tiporeina"/>
+            </xs:choice>
+            <xs:element name="consorte" type="tipoconsorte" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attributeGroup ref="grupodata">
+                </xs:attributeGroup>
+        </xs:complexType> 
+    </xs:element>
+
+
+/*REY*/
+<xs:element name="tiporei">
+        <xs:complexType>
+            <xs:attribute name="codigo" type="tipocodigo" use="required" />
+        </xs:complexType>
+    </xs:element>
+
+
+/*REINA*/
+<xs:element name="tiporeina">
+        <xs:complexType>
+            <xs:attribute name="codigo" type="tipocodigo" use="required" />
+        </xs:complexType>
+    </xs:element>
+
+
+/*CONSORTE*/
+<xs:element name="tipoconsorte">
+        <xs:complexType>
+            <xs:attributeGroup ref="grupodata">
+                </xs:attributeGroup>
+        </xs:complexType>
+    </xs:element>
+
+
+/*attgroup data*/
+<xs:attributeGroup name="grupodata">
+        <xs:attribute name="dende" type="xs:date" use="required" />
+            <xs:attribute name="ata" type="xs:date" use="required" />
+    </xs:attributeGroup>
+
+
+/*PERSONA*/
+<xs:element name="persoa">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nome" type="xs:string"/>
+                <xs:element name="apodo" type="xs:string"/>
+                <xs:element name="casa" type="tipocasa" minOccurs="1"/>
+            </xs:sequence>
+            <xs:attribute name="codigo" type="tipocodigo" use="required" />
+        </xs:complexType>
+    </xs:element>
+/*Simple persona*/
+<xs:simpleType name="tipocasa">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Borbon"/>
+            <xs:enumeration value="Saboya"/>
+            <xs:enumeration value="Bonaparte"/>
+        </xs:restriction>
+    </xs:simpleType>
+<xs:simpleType name="tipocodigo">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z]{2}[0-9]{2}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
+
+
+
+
+
+
+
+
+
+//* Tarefa 5_d *//
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<oscar ano="2013">
+
+<película codigo="FO-80001">
+
+<título>Argo</título>
+
+<ano>2012</ano>
+
+<xéneros>Thriller Drama</xéneros>
+
+<duración>120</duración>
+
+<nominacións>
+
+<mellorPelícula oscar="SI"/>
+
+<mellorActorSecundario ref="EF-Y10"/>
+
+</nominacións>
+
+</película>
+
+<película codigo="FE-7586">
+
+<título>El lado bueno de las cosas</título>
+
+<títuloOrixinal>Happiness therapy</títuloOrixinal>
+
+<ano>2012</ano>
+
+<xéneros>Comedia Drama</xéneros>
+
+<duración>122</duración>
+
+<nominacións>
+
+<mellorPelícula/>
+
+<mellorDirector ref="EF-Y10"/>
+
+<mellorActriz ref="OT-A23" oscar="SI"/>
+
+<mellorActor ref="OH-R23"/>
+
+<mellorActrizSecundaria ref="EW-A99"/>
+
+<mellorActorSecundario ref="UR-M9"/>
+
+</nominacións>
+
+</película>
+
+<película codigo="PO-81004">
+
+<título>Los miserables</título>
+
+<ano>2012</ano>
+
+<xéneros>Musical Drama</xéneros>
+
+<duración>152</duración>
+
+<nominacións>
+
+<mellorPelícula/>
+
+<mellorActor ref="UH-M77"/>
+
+<mellorActrizSecundaria ref="AH-R50"/>
+
+</nominacións>
+
+</película>
+
+<película codigo="AN-7699">
+
+<título>La vida de Pi</título>
+
+<nominacións>
+
+<mellorDirector ref="AL-E97" oscar="SI"/>
+
+<mellorPelícula/>
+
+</nominacións>
+
+</película>
+
+<película codigo="LI-7989">
+
+<título>Lo imposible</título>
+
+<ano>2012</ano>
+
+<nacionalidade>Española</nacionalidade>
+
+<xéneros>Drama</xéneros>
+
+<duración>107</duración>
+
+<nominacións>
+
+<mellorActriz ref="EX-E5"/>
+
+</nominacións>
+
+</película>
+
+<película codigo="NN-7599">
+
+<título>No</título>
+
+<nacionalidade>Chilena</nacionalidade>
+
+<nominacións>
+
+<mellorLinguaNonInglesa/>
+
+</nominacións>
+
+</película>
+
+<persona codigo="EX-E5" sexo="Muller">
+
+<nome>Naomi Watts</nome>
+
+<idade>45</idade>
+
+</persona>
+
+<persona codigo="EF-Y10" sexo="Home">
+
+<nome>Alan Arkin</nome>
+
+</persona>
+
+<persona codigo="AH-R50" sexo="Muller">
+
+<nome>Anne Hathaway</nome>
+
+<idade>30</idade>
+
+</persona>
+
+<persona codigo="OH-R23" sexo="Home">
+
+<nome>Bradley Cooper</nome>
+
+<idade>38</idade>
+
+</persona>
+
+<persona codigo="OT-A23" sexo="Muller">
+
+<nome>Jennifer Lawrence</nome>
+
+</persona>
+
+<persona codigo="UR-M9" sexo="Home">
+
+<nome>Robert de Niro</nome>
+
+<idade>69</idade>
+
+</persona>
+
+<persona codigo="EW-A99" sexo="Muller">
+
+<nome>Jacki Weaver</nome>
+
+</persona>
+
+<persona codigo="UH-M77" sexo="Home">
+
+<nome>Hugh Jackman</nome>
+
+<idade>44</idade>
+
+</persona>
+
+<persona codigo="AL-E97" sexo="Home">
+
+<nome>Ang Lee</nome>
+
+</persona>
+
+</oscar>
+
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchemaOSCAR">
+/*OSCAR*/
+<xs:element name="oscar">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="personas" type="tipopersona" maxOccurs="unbounded"/>
+                <xs:element name="peliculas" type="tipopelicula" maxOccurs="Unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="fecha" type="xs:gYear" use="required" />
+        </xs:complexType>
+    /*key personas */
+    <xs:key name="personaUnica">
+            <xs:selector xpath="persona"/>
+            <xs:field xpath="@codigo"/>
+        </xs:key>
+    <xs:keyref name="peronasPremiadas" refer="personaUnica">
+        <xs:selector xpath="MellorActor"/>
+        <xs:field xpath="persona"/>
+    </xs:keyref>
+    <xs:keyref name="peronasPremiadas" refer="personaUnica">
+            <xs:selector xpath="MellorActorSecundario"/>
+            <xs:field xpath="persona"/>
+        </xs:keyref>
+     <xs:keyref name="peronasPremiadas" refer="personaUnica">
+            <xs:selector xpath="MellorActriz"/>
+            <xs:field xpath="persona"/>
+        </xs:keyref>
+     <xs:keyref name="peronasPremiadas" refer="personaUnica">
+            <xs:selector xpath="MellorActrizSecundaria"/>
+            <xs:field xpath="persona"/>
+        </xs:keyref>
+    <xs:keyref name="peronasPremiadas" refer="personaUnica">
+            <xs:selector xpath="MellorDirector"/>
+            <xs:field xpath="persona"/>
+        </xs:keyref>
+    /* key pelicula s*/
+    <xs:key name="peliculaUnica">
+            <xs:selector xpath="pelicula"/>
+            <xs:field xpath="@codigo"/>
+        </xs:key>
+        <xs:keyref name="peliculasPremiadas" refer="peliculaUnica">
+            <xs:selector xpath=""/>
+            <xs:field xpath="pelicula"/>
+        </xs:keyref>
+    </xs:element>
+/*PELICULA*/
+<xs:element name="pelicula">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="titulo" type="xs:string"/>
+                <xs:element name="tituloOrixinal" type="xs:string" minOccurs="0"/>
+                <xs:element name="ano" type="xs:gYear" minOccurs="0"/>
+                <xs:element name="xenero" type="tipoxenero" minOccurs="0"/>
+                <xs:element name="duracion" type="xs:unsignedShort" minOccurs="0"/>
+                <xs:element name="nominacions" type="tiponominacion"/>
+            </xs:sequence>
+            <xs:attribute name="codigo" type="tipocodigopelicula" use="required" />
+        </xs:complexType>
+    </xs:element>
+/*simple pelicula*/
+<xs:simpleType name="tipoxenero">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Negro"/>
+            <xs:enumeration value="Accion"/>
+            <xs:enumeration value="Drama"/>
+            <xs:enumeration value="Comedia"/>
+            <xs:enumeration value="Triller"/>
+            <xs:enumeration value="Musical"/>
+        </xs:restriction>
+    </xs:simpleType>
+<xs:simpleType name="tipocodigopelicula">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z]{2}-[0-9]{4,5}"/>
+        </xs:restriction>
+    </xs:simpleType>
+/*NOMINACIONS*/
+<xs:element name="tiponominacions">
+        <xs:complexType>
+            <xs:sequence maxOccurs="7">
+                <xs:element name="meyorPelicula" type="tipopeliculanom"/>
+                <xs:element name="MeyorDirector" type="tipopersonanom"/>
+                <xs:element name="meyorActor" type="tipopersonanom"/>
+                <xs:element name="meyorActriz" type="tipopersonanom"/>
+                <xs:element name="MeyorActorSecundario" type="tipopersonanom"/>
+                <xs:element name="MeyorActrizSecundaria" type="tipopersonanom"/>
+                <xs:element name="MeyorLinguaNonInglesa" type="tipopeliculanom" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+/*Peliculas*/
+<xs:element name="tipopeliculanom">
+        <xs:complexType>
+            <xs:attributeGroup ref="gruponominados">
+                </xs:attributeGroup>
+        </xs:complexType>
+    </xs:element>
+<xs:element name="tipopersonanom">
+        <xs:complexType>
+            <xs:attributeGroup ref="grupopersonas">
+                </xs:attributeGroup>
+            <xs:attributeGroup ref="gruponominados">
+                </xs:attributeGroup>
+        </xs:complexType>
+    </xs:element>
+/*grupo oscar*/
+<xs:attributeGroup name="gruponominados">
+    <xs:attribute name="oscar" type="xs:string" use="optional" default="Si"/>
+</xs:attributeGroup>
+/*Grupo personas*/
+<xs:attributeGroup name="grupopersonas">
+    <xs:attribute name="codigo" type="tipocodigopersona" />
+</xs:attributeGroup>
+/*PERSONA*/
+<xs:element name="tipopersona">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nome" type="xs:string"/>
+                <xs:element name="idade" type="tipoedad" maxOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute name="codigo" type="tipocodigopersona" use="required" />
+            <xs:attribute name="sexo" type="tiposexo" use="required" />
+        </xs:complexType>
+    </xs:element>
+/*Simple persona*/
+    <xs:simpleType name="tipoedad">
+        <xs:restriction base="xs:unsignedShort">
+            <xs:maxInclusive value="110"/>
+        </xs:restriction>
+    </xs:simpleType>
+<xs:simpleType name="tipocodigopersona">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[AEIOU][^AEIOU]-[A-Z][0-9][0-9]?"/>
+        </xs:restriction>
+    </xs:simpleType>
+<xs:simpleType name="tiposexo">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Home"/>
+            <xs:enumeration value="Muyer"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+</xs:schema>
+
+
+
+
+
+
+
+/* Tarefa 5_e */
+
+
+<instituto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance&quot";
+
+xsi:noNamespaceSchemaLocation="tarefaUD7_5e.xsd">
+    
+
+<alumno numExpedente="123" nome="Alicia María"
+
+apelido1="Casal" apelido2="Ferreiro">
+
+<altura>156</altura>
+
+</alumno>
+
+<alumno numExpedente="155" nome="Paloma" apelido1="Pereiró">
+
+<altura>Baixo</altura>
+
+</alumno>
+
+<profesor NRP="1234A590" nome="Carme"
+
+apelido1="Bouza" apelido2="Dominguez"/>
+
+<profesor NRP="3332A590" nome="Mariña"
+
+apelido1="Cerviño" apelido2="Dominguez"/>
+
+<alumno numExpedente="3442" nome="Fernando"
+
+apelido1="Puga" apelido2="Prado">
+
+<altura>178</altura>
+
+</alumno>
+
+</instituto>
+
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchemaNONAMES">
+
+            
+/*llamda a esquema*/
+<xs:include schemaLocation="tarea3.3.5.xml"/>
+    
+/*INSTITUTO*/
+<xs:element name="instituto">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="alumno" type="tipoalumno"/>
+                <xs:element name="profesor" type="tipoprofesor"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    /*Key profe */
+    <xs:key name="profeunico">
+            <xs:selector xpath="profesor"/>
+            <xs:field xpath="@NRP"/>
+        </xs:key>
+    <xs:keyref name="profe" refer="profeunico">
+        <xs:selector xpath="NRP"/>
+        <xs:field xpath="profesor"/>
+    </xs:keyref>
+    
+    /* key alumno*/
+    <xs:key name="alumnounico">
+            <xs:selector xpath="expediente"/>
+            <xs:field xpath="@codigo"/>
+        </xs:key>
+    <xs:keyref name="profeunic" refer="alumnounico">
+        <xs:selector xpath="alumno"/>
+        <xs:field xpath="expediente"/>
+    </xs:keyref>
+
+    
+/*ALUMNO*/
+<xs:element name="alumno">
+        <xs:complexType>
+            <xs:sequence>
+                 <xs:choice>
+                    <xs:element name="altura" type="tipoaltura"/>
+                    <xs:element name="altura" type="tipoalturacm"/>
+                </xs:choice>
+            </xs:sequence>
+             <xs:attribute name="numExpedente" type="xs:string" use="required"/>
+            <xs:attributeGroup ref="gruponome">
+                </xs:attributeGroup>
+        </xs:complexType>
+    </xs:element>
+
+/*Simple alumno*/
+<xs:simpleType name="tipoaltura">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Alto"/>
+            <xs:enumeration value="Baixo"/>
+        </xs:restriction>
+    </xs:simpleType>
+<xs:simpleType name="tipoalturacm">
+        <xs:restriction base="xs:unsignedShort">
+            <xs:minInclusive value="21"/>
+        </xs:restriction>
+    </xs:simpleType>
+/*PROFESOR*/
+<xs:element name="tipoprofesor">
+        <xs:complexType>
+            <xs:attribute name="nrp" type="xs:string" use="required"/>
+            <xs:attributeGroup ref="gruponome">
+                </xs:attributeGroup>
+        </xs:complexType>
+    </xs:element>
+    
+</xs:schema>
+
+
+
+/*ESQUEMA 2*/
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchemaNAMES">
+/*GrupoNomes*/
+<xs:attributeGroup name="gruponome">
+            <xs:attribute name="nome" type="xs:string" use="required"/>
+            <xs:attribute name="apelido" type="xs:string" use="required"/>
+            <xs:attribute name="apelido2"
+            type="xs:string" use="required"/>
+</xs:attributeGroup>
+    
+</xs:schema>

@@ -1,0 +1,168 @@
+/*Tarea3.3.a*/
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="garderia">
+        <xs:complexType name='neno' type="tipoNeno">
+            <xs:sequence>
+                <xs:element name="nome" type="xs:string"/>
+                <xs:element name="dataNacemento" type="xs:date"/>
+                <xs:element name="peso" type="xs:decimal"/>
+                <xs:element name="altura" type="xs:decimal"/>
+                <xs:element name="vacunas" type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+        <xs:attribute name="numeroExpedente" type="xs:unsignedShort"/>
+    </xs:element>
+</xs:schema>
+
+<xs:element name="sexo" type="tiposexo"></xs:element>
+            
+    <xs:simpleType name="tiposexo">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="H"></xs:enumeration>
+            <xs:enumeration value="M"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+
+<xs:element name="peso" type="pesoneno"></xs:element>
+            
+    <xs:simpleType name="pesoneno">
+        <xs:restriction base="xsunsignedDecimal">
+            <xs:fractionDigits value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+
+<xs:element name="nome" type="nomeneno"></xs:element>
+            
+    <xs:simpleType name="nomeneno">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="3"/>
+            <xs:maxLength value="80"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+
+
+<xs:attribute name="codigo" type="codigoneno"/>
+            
+    <xs:simpleType name="codigoneno">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[P|M][3-7]{2}(-[0-9]{3})?"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+
+
+<xs:element name="nome" type="tipocontacto"></xs:element>
+
+    <xs:complexType name="tipocontacto">
+        <xs:simplecontent>
+            <xs:extension base="tipotelefono">
+                <xs:attribute name="relacion" type="tiporelacion" use="required"></xs:attribute>
+            </xs:extension>
+        </xs:simplecontent>
+</xs:complexType>
+
+    <xs:simpleType name="tipotelefono">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{9}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+<xs:simpleType name="relacion">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="nai"></xs:enumeration>
+            <xs:enumeration value="pai"></xs:enumeration>
+            <xs:enumeration value="avo"></xs:enumeration>
+            <xs:enumeration value="avoa"></xs:enumeration>
+            <xs:enumeration value="titor"></xs:enumeration>
+            <xs:enumeration value="otro"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+
+<xs:element name="idade" type="idadeneno"></xs:element>
+    <xs:complexType name="tipoidade">
+        <xs:attribute name="anos" type="anos"></xs:attribute>
+        <xs:attribute name="meses" type="meses"></xs:attribute>
+    </xs:complexType>
+
+<xs:simpleType name="anos">
+        <xs:restriction base="xs:unsignedByte">
+            <xs:maxInclusive value="3"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+<xs:simpleType name="meses">
+        <xs:restriction base="xs:unsignedByte">
+            <xs:maxInclusive value="11"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+
+
+
+
+
+
+
+/*Tarea3.3.b*/
+
+<xs:attribute name="modulo" type="codigomodulo"/>
+
+    <xs:simpleType name="codigomodulo">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="MP[0-9]{4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+
+
+<xs:attribute name="horas" type="xs:unsignedByte"></xs:attribute>
+<xs:attribute name="sesions" type="xs:unsignedShort"></xs:attribute>
+<xs:attribute name="sesionssemanais" type="tipoNumero" use="requierd"></xs:attribute>
+<xs:attribute name="num" type="tipoNumero" use="requierd"></xs:attribute>
+
+
+    <xs:simpleType name="tipoNumero">
+        <xs:restriction base="xs:unsignedByte">
+            <xs:maxInclusive value="21"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    
+
+
+<xs:element name="Titulo" type="tipoNomeLongo"/>
+<xs:element name="Ciclo" type="tipoNomeLongo"/>
+<xs:element name="Modulo" type="tipoNomeLongo"/>
+
+    <xs:simpleType name="tipoNomeLongo">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="150"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    
+    
+
+<xs:attribute name="codigo" type="tipocodigo"/>
+
+    <xs:simpleType name="codigomodulo">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="C[S|M][A-Z]{3}[0-9]{2}"/>
+            <xs:pattern value="C[S|M][A-Z]{3}/d{2}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    
+

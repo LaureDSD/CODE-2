@@ -1,0 +1,24 @@
+O documento coa información dos pedidos é o seguinte:
+
+<?xml version="1.1" encoding="utf-8"?>
+
+<!-- pedidos.xml -->
+
+<pedidos>
+
+<pedido>
+
+<numeroID>6523213</numeroID>
+
+<cod_articulo>CAJ123</cod_articulo>
+
+<nombre_articulo>Caja de herramientas</nombre_articulo>
+
+<precio>187,90</precio>
+
+</pedido>
+
+
+…
+
+</pedidos>

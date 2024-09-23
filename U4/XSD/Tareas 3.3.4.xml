@@ -1,0 +1,180 @@
+/* Tarefa 4_a */
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT instituto (alumno|profesor)+>
+    <!ELEMENT alumno (#PCDATA)>
+        <!ATTLIST alumno
+            numExpedente CDATA #REQUIRED
+            nome CDATA #REQUIRED
+            apelido1 CDATA #REQUIRED
+            apelido2 CDATA #REQUIRED>
+
+    <!ELEMENT profesor (#PCDATA)>
+        <!ATTLIST profesor
+            NRP CDATA #REQUIRED
+            nome CDATA #REQUIRED
+            apelido1 CDATA #REQUIRED
+            apelido2 CDATA #REQUIRED>
+
+
+<xml versión="1.1" encoding="utf-8">
+
+<instituto xmlns="http://www.compras.com/espazosdenomes/insti/" xsi:noNamespaceSchemaLocation="tarea3_3_4.xsd" >
+    
+    <alumno numExpedente="A1" nome="A" apelido1="AA" apelido1="AAA">Alumno1</alumno>
+    <alumno numExpedente="A2" nome="B" apelido1="BB" apelido1="BBB">Alumno2</alumno>
+    <profesor NRP="P1" nome="C" apelido1="DD" apelido1="DDD">Profe1</profesor>
+    
+</instituto>
+
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    
+    <xs:element name="instituto">
+        <xs:complexType>
+            <xs:choice minOccurs="1" maxOccurs="unbounded">
+                <xs:element name="alumno" type="alumno"/>
+                <xs:element name="profesor" type="profesor"/>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="alumno">
+         <xs:complexType>
+            <xs:attribute name="nume expediente" typr="tipoNumero" use="required">
+                <xs:attributeGroup ref="grupoNome">
+                </xs:attributeGroup>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="profesor">
+         <xs:complexType>
+            <xs:attribute name="NRP" typr="tipoNRP" use="required">
+                <xs:attributeGroup ref="grupoNome">
+                </xs:attributeGroup>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:attributeGroup name="grupoNome">
+        <xs:attribute nome="nome" type="tipoNome" use="required"/>
+        <xs:attribute nome="apellido" type="tipoNome" use="required"/>
+        <xs:attribute nome="apellido2" type="tipoNome"/>
+    </xs:attributeGroup>
+
+    <xs.simpleType name="tipoNome">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="50"></xs:maxLength>
+            <xs:pattern value="[A-ZÁÉÍÓÚ]([\sA-Za-áéíóúñ])+" />
+            <xs:whiteSpace value="collate" />
+        </xs:restriction>
+    </xs.simpleType>
+
+    <xs:simpleType name="tipoNumExpediente">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{3,4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tipoNRP">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{3,4}[A-E]\d{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+</xs:schema>
+
+
+
+/* Tarefa 4_b */
+
+<!ELEMENT musica ((cd|musico)*)>
+    <!ELEMENT cd EMPTY>
+        <!ATTLIST cd titulo NMTOKENS #REQUIRED>
+        <!ATTLIST cd ano CDATA #IMPLIED>
+        <!ATTLIST cd interprete IDREF #REQUIRED>
+    
+    <!ELEMENT musico (nomeArtistico,tipo?, instrumento*)>
+        <!ELEMENT nomeArtistico (#PCDATA)>
+        <!ELEMENT tipo (#PCDATA)>
+        <!ELEMENT instrumento (#PCDATA)>
+        <!ATTLIST musico codigo ID #REQUIRED>
+    
+    
+<xml versión="1.1" encoding="utf-8">
+<musica xmlns="http://www.compras.com/espazosdenomes/musica/" xsi:noNamespaceSchemaLocation="tarea3_3_4.xsd" >
+    
+    <cd titulo="A" ano="1" interprete="1"/>
+    <musico codigo="1">
+        <nomeArtisticio>PEPE</nomeArtisticio>
+        <tipo>A</tipo>
+        <instrumento>Piano</instrumento>
+    </musico>
+    
+    <cd titulo="B" ano="2" interprete="2"/>
+    <musico codigo="2">
+        <nomeArtisticio>NENE</nomeArtisticio>
+        <tipo>A</tipo>
+        <instrumento>Piano</instrumento>
+    </musico>
+    
+</musica>
+    
+    
+ <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    
+    <xs:element name="musica">
+        <xs:complexType>
+            <xs:choice maxOccurs="unbounded">
+                <xs:element name="cd" type="cd"/>
+                <xs:element name="musico" type="musico"/>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+     
+     <xs:element name="cd">
+         <xs:complexType>
+             <xs:attribute name="titulo" type="xs:string" use="required"/>
+             <xs:attribute name="ano" type="tipoAno"/>
+             <xs:attribute name="interprete" type="tipoCodigo" use="required"/>
+        </xs:complexType>
+    </xs:element>
+     
+     <xs:element name="musico">
+         <xs:complexType>
+             <xs:sequence>
+                <xs:element name="nomeArtistico" type="xs:string"/>
+                <xs:element name="tipo" type="tipoMusico" minOccurs="0"/>
+                <xs:element name="instrumento" type="xs:string" minOccurs="0"/>
+             </xs:sequence>
+             <xs:attribute name="codigoID" type="tipoCodigo"  use="required"/>
+        </xs:complexType>
+    </xs:element>
+     
+     <xs:simpleType name="tipoAno">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(19|20)[0-9][0-9]"/>
+        </xs:restriction>
+    </xs:simpleType>
+     
+      <xs:simpleType name="tipoCodigo">
+        <xs:restriction base="xs:string">
+            <pattern vaue="[A-Z]{2}[A-Z0-9]\d{2,3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+     
+      <xs:simpleType name="tipoMusico">
+        <xs:restriction base="xs:string">
+            <xs.enumeration value="cantautor"/>
+            <xs.enumeration value="duo"/>
+            <xs.enumeration value="solista"/>
+            <xs.enumeration value="grupo "/>
+            <xs.enumeration value="banda "/>
+        </xs:restriction>
+    </xs:simpleType>
+     
+     
+     
+</xs:schema>    

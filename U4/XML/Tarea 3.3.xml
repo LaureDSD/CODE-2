@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<ejercicio3.3>
+    
+<jugadores_espana>
+    <jugador>
+        <equipo>1</equipo>    
+        <nombre>2</nombre>
+        <numero>3</numero>
+        <posicion>4</posicion>
+        <nacimiento>5</nacimiento>
+        <fecha_fichaje>6</fecha_fichaje>
+        <anos_contrato>7</anos_contrato>
+    </jugador>    
+</jugadores_espana>
+
+<discos_musica>
+    <disco>
+        <titulo>1</titulo>
+        <interprete>2</interprete>
+        <duracion>3</duracion>
+        <ano_publicacion>4</ano_publicacion>
+        <precio>5</precio>
+    </disco>
+</discos_musica>
+
+<casa_turismo_RS>
+    <casa>
+        <nombre>1</nombre>
+        <CIF>2</CIF>
+        <responsable>3</responsable>
+        <numero_huespedes_max>4</numero_huespedes_max>
+        <permiso_mascotas>5</permiso_mascotas>
+        <garaje>6</garaje>
+        <precio_noche>7</precio_noche>
+        <cocina_particular_colectiva>8</cocina_particular_colectiva>
+    </casa>
+</casa_turismo_RS>
+
+<registro_inmigrantes_galicia>
+    <inmigrante>
+        <nombre_apellidos>1</nombre_apellidos>
+        <direccion_actual>2</direccion_actual>
+        <numero_identiicacion>3</numero_identiicacion>
+        <fecha_nacimiento>4</fecha_nacimiento>
+        <profesion>5</profesion>
+        <situacion_laboral>6</situacion_laboral>
+        <pais_orijen>7</pais_orijen>
+        <ano_llegada>8</ano_llegada>
+        <legal_ilegal>9</legal_ilegal>
+    </inmigrante>
+</registro_inmigrantes_galicia>
+    
+</ejercicio3.3>

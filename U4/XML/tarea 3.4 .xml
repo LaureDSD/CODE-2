@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF=8"?>
+
+<montrivial xmlns="http://www.trivial.com/espazosdenomes/tema/"
+xmlns:tem="http://www.tema.com/espazosdenomes/tema/"            
+xmlns:pre="http://www.pregunta.com/espazosdenomes/pregunta/"
+xmlns:res="http://www.respuesta.com/espazosdenomes/respuesta/">
+
+  <temas>  
+
+    <tema num="1">
+    
+      <tutor>jacinto</tutor>
+      <nombre>monumentos</nombre>
+      <num_preguntas>3</num_preguntas>
+
+    </tema>
+    <tema num="2">
+    
+      <tutor>roberto</tutor>
+      <nombre>fiestas</nombre>
+      <num_preguntas>3</num_preguntas>
+
+    </tema>
+    <tema num="3">
+    
+      <tutor>alfredo</tutor>
+      <nombre>ferrocarril</nombre>
+      <num_preguntas>3</num_preguntas>
+
+    </tema>
+    <tema num="4">
+    
+      <tutor>lucia</tutor>
+      <nombre>juderia</nombre>
+      <num_preguntas>3</num_preguntas>
+
+    </tema>
+    <tema num="5">
+    
+      <tutor>sara</tutor>
+      <nombre>celtas</nombre>
+      <num_preguntas>3</num_preguntas>
+
+    </tema>
+
+  </temas>
+  <preguntas>
+
+
+      <pregunta numero="1" tema="1">cuanto mide la torre del homenaje
+          <fuente>http://www.jrcasan.com/jrcasan.htm</fuente></pregunta>
+        
+      <pregunta numero="2" tema="1">de que siglo es el palacio condal de san vicente
+        <fuente>http://www.jrcasan.com/jrcasan.htm</fuente></pregunta>
+        
+      <pregunta numero="3" tema="1">quien inició las obras del colegio de los escolapios
+        <fuente>http://www.jrcasan.com/jrcasan.htm</fuente></pregunta>      
+
+      <pregunta numero="1" tema="2">cuando es la feria medieval
+        <fuente>http://www.jrcasan.com/jrcasan.htm</fuente></pregunta>
+      
+      <pregunta numero="2" tema="2">donde se celebra el san mateo
+      <fuente>http://www.jrcasan.com/jrcasan.htm</fuente></pregunta>
+      
+      <pregunta numero="3" tema="2">cuando se celebran las fiestas patronales
+    <fuente>http://www.jrcasan.com/jrcasan.htm</fuente></pregunta>    
+
+  
+  </preguntas>
+
+    
+  <respuestas>
+
+
+        <respuesta numero="1" tema="1" pre="1" resp="correcta">30 metros</respuesta>
+        <respuesta_b numero="2" tema="1" pre="1">45 metros</respuesta_b>
+        <respuesta_a numero="1" tema="1" pre="2" resp="correcta">XVI</respuesta_a>
+        <respuesta_b numero="2" tema="1" pre="2">XIII</respuesta_b>
+
+
+        <respuesta_a numero="1" tema="2" pre="1" resp="correcta">sabado santo</respuesta_a>
+        <respuesta_b numero="2" tema="2" pre="1">12 enero</respuesta_b>
+        <respuesta_a numero="1" tema="2" pre="2" resp="correcta">a parte</respuesta_a>
+        <respuesta_b numero="2" tema="2" pre="2">a estación</respuesta_b>
+  
+    <pregunta_1>
+
+        <respuesta_a resp="correcta">lemavos</respuesta_a>
+        <respuesta_b>lemitas</respuesta_b>
+
+      </pregunta_1>
+    <pregunta_2>
+
+        <respuesta_a resp="correcta">castro dactonio</respuesta_a>
+        <respuesta_b>castro lemavo</respuesta_b>
+
+      </pregunta_2>
+
+  </respuestas>
+
+  <soluciones>
+
+    <fuente_1>http://es.wikipedia.org/wiki/Monforte_de_Lemos#Junta_y_Batall.C3.B3n_de_Lemos<fuente_1>
+    <fuente_2>http://www.monfortedelemos.es/</fuente_2>
+    <fuente_3>http://www.jrcasan.com/jrcasan.htm</fuente_3>
+
+  </soluciones>
+
+</montrivial>

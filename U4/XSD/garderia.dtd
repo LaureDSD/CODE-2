@@ -1,0 +1,8 @@
+<!ELEMENT garderia (neno*)>
+<!ELEMENT neno (nome, dataNacemento, peso, altura, vacunas)>
+<!ATTLIST neno numeroExpedente CDATA #REQUIRED>
+<!ELEMENT nome (#PCDATA)>
+<!ELEMENT dataNacemento (#PCDATA)>
+<!ELEMENT peso (#PCDATA)>
+<!ELEMENT altura (#PCDATA)>
+<!ELEMENT vacunas (#PCDATA)>

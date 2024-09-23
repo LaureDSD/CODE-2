@@ -1,0 +1,166 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchemaOSCAR">
+
+/*OSCAR*/
+<xs:element name="oscar">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="personas" type="tipopersona"/>
+                <xs:element name="peliculas" type="tipopelicula"/>
+            </xs:sequence>
+            <xs:attribute name="fecha" type="tipoano" use="required" />
+        </xs:complexType>
+    /*key personas */
+    <xs:key name="personaUnica">
+            <xs:selector xpath="persona"/>
+            <xs:field xpath="@codigo"/>
+        </xs:key>
+        <xs:keyref name="peronasPremiadas" refer="personaUnica">
+            <xs:selector xpath="MellorActor"/>
+            <xs:field xpath="persona"/>
+        </xs:keyref>
+    <xs:keyref name="peronasPremiadas" refer="personaUnica">
+            <xs:selector xpath="MellorActorSecundario"/>
+            <xs:field xpath="persona"/>
+        </xs:keyref>
+     <xs:keyref name="peronasPremiadas" refer="personaUnica">
+            <xs:selector xpath="MellorActriz"/>
+            <xs:field xpath="persona"/>
+        </xs:keyref>
+     <xs:keyref name="peronasPremiadas" refer="personaUnica">
+            <xs:selector xpath="MellorActrizSecundaria"/>
+            <xs:field xpath="persona"/>
+        </xs:keyref>
+    <xs:keyref name="peronasPremiadas" refer="personaUnica">
+            <xs:selector xpath="MellorDirector"/>
+            <xs:field xpath="persona"/>
+        </xs:keyref>
+    
+    
+    /* key pelicula s*/
+    <xs:key name="peliculaUnica">
+            <xs:selector xpath="pelicula"/>
+            <xs:field xpath="@codigo"/>
+        </xs:key>
+        <xs:keyref name="peliculasPremiadas" refer="peliculaUnica">
+            <xs:selector xpath=""/>
+            <xs:field xpath="pelicula"/>
+        </xs:keyref>
+    
+    </xs:element>
+
+/*PELICULA*/
+<xs:element name="pelicula">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="titulo" type="tipotitulo" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="ano" type="tipoano" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="xenero" type="tipoxenero" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="duracion" type="tipoduracion" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="nominacions" type="tiponominacion"/>
+            </xs:sequence>
+            <xs:attribute name="codigo" type="tipocodigopelicula" use="required" />
+        </xs:complexType>
+    </xs:element>
+/*simple pelicula*/
+<xs:simpleType name="tipocodigopelicula">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z]-[0-9]{4,5}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+/*NOMINACIONS*/
+<xs:element name="tiponominacions">
+        <xs:complexType>
+            <xs:sequence maxOccurs="7">
+                <xs:element name="meyorPelicula" type="tipopelicula"/>
+                <xs:element name="MeyorDirector" type="tipodirector"/>
+                <xs:element name="meyorActor" type="tipoactor"/>
+                <xs:element name="meyorActriz" type="tipoactriz"/>
+                <xs:element name="MeyorActorSecundario" type="tipoactor"/>
+                <xs:element name="MeyorActrizSecundaria" type="tipoactriz"/>
+                <xs:element name="MeyorLinguaNonInglesa" type="tipoMeyorLinguaNonInglesa" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+/*Peliculas*/
+<xs:element name="tipopelicula">
+        <xs:complexType>
+            <xs:attributeGroup ref="gruponominados">
+                </xs:attributeGroup>
+        </xs:complexType>
+    </xs:element>
+/*Directores*/
+<xs:element name="tipodirector">
+        <xs:complexType>
+            <xs:attributeGroup ref="grupopersonas">
+                </xs:attributeGroup>
+            <xs:attributeGroup ref="gruponominados">
+                </xs:attributeGroup>
+        </xs:complexType>
+    </xs:element>
+/*Actores*/
+<xs:element name="tipoactor">
+        <xs:complexType>
+            <xs:attributeGroup ref="grupopersonas">
+                </xs:attributeGroup>
+            <xs:attributeGroup ref="gruponominados">
+                </xs:attributeGroup>
+        </xs:complexType>
+    </xs:element>
+/*Actrizes*/
+<xs:element name="tipoactriz">
+        <xs:complexType>
+            <xs:attributeGroup ref="grupopersonas">
+                </xs:attributeGroup>
+            <xs:attributeGroup ref="gruponominados">
+                </xs:attributeGroup>
+        </xs:complexType>
+    </xs:element>
+/*Lingua non ingles*/
+<xs:element name="tipoMeyorLinguaNonInglesa">
+        <xs:complexType>
+            <xs:attributeGroup ref="gruponominados">
+                </xs:attributeGroup>
+        </xs:complexType>
+    </xs:element>
+/*grupo oscar*/
+<xs:attributeGroup name="gruponominados">
+    <xs:attribute name="oscar" type="xs:string" use="optional" default="Si"/>
+</xs:attributeGroup>
+/*Grupo personas*/
+<xs:attributeGroup name="grupopersonas">
+    <xs:attribute name="codigo" type="tipocodigopersona" />
+</xs:attributeGroup>
+
+
+/*PERSONA*/
+<xs:element name="persona">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nome" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="idade" type="tipoedad" maxOccurs="1"/>
+            </xs:sequence>
+            <xs:attribute name="codigo" type="tipocodigopersona" use="required" />
+            <xs:attribute name="sexo" type="tiposexo" use="required" />
+        </xs:complexType>
+    </xs:element>
+/*Simple persona*/
+    <xs:simpleType name="tipoedad">
+        <xs:restriction base="xs:unsignedShort">
+            <xs:maxInclusive value="110"/>
+        </xs:restriction>
+    </xs:simpleType>
+<xs:simpleType name="tipocodigopersona">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[AEIOU]{1}[^AEIOU]{1}-[A-Z]{1}[0-9]{2}"/>
+        </xs:restriction>
+    </xs:simpleType>
+<xs:simpleType name="tiposexo">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Home"/>
+            <xs:enumeration value="Muyer"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+</xs:schema>

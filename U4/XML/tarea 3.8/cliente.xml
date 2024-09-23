@@ -1,0 +1,25 @@
+<?xml version="1.1" encoding="utf-8"?>
+
+<!-- clientes.xml -->
+
+<clientes>
+
+<cliente>
+
+<numero_ID>1232654</numero_ID>
+
+<nombre>Fulanito de Tal</nombre>
+
+<telefono>99999999</telefono>
+
+</cliente>
+
+<cliente>
+
+…
+
+</cliente>
+
+…
+
+</clientes>

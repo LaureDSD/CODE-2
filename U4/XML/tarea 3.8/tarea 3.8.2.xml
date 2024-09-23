@@ -1,0 +1,76 @@
+<?xml version="1.1" encoding="utf-8"?>
+
+<compras xmlns="http://www.compras.com/espazosdenomes/compras/" xmlns:pedi="http://www.pedidos.com/espazosdenomes/pedidos/" 
+xmlns:clie="http://www.clientes.com/espazosdenomes/clientes/">
+    
+  <clie:cliente>
+      
+    <clie:numero_ID>1232654</clie:numero_ID>
+      
+    <clie:nombre>Fulanito de tal</clie:nombre>
+      
+    <clie:telefono>999999999</clie:telefono>
+      
+    <pedi:pedido>
+
+<pedi:numero_ID>6523213</pedi:numero_ID>
+
+<pedi:cod_articulo>CAJ123</pedi:cod_articulo>
+
+<pedi:nombre_articulo>Caja de herramientas1</pedi:nombre_articulo>
+
+<pedi:precio>187,90</pedi:precio>
+
+</pedi:pedido>
+      
+      
+	<pedi:pedido>
+
+<pedi:numero_ID>65232135</pedi:numero_ID>
+
+<pedi:cod_articulo>CAJ1234</pedi:cod_articulo>
+
+<pedi:nombre_articulo>Caja de herramientas2</pedi:nombre_articulo>
+
+<pedi:precio>187,90</pedi:precio>
+
+</pedi:pedido>
+      
+    </clie:cliente>
+    
+	<clie:cliente>
+    <clie:numero_ID>1232654.2</clie:numero_ID>
+      
+    <clie:nombre>Fulanito de tal</clie:nombre>
+      
+    <clie:telefono>999999999</clie:telefono>
+      
+      
+    <pedi:pedido>
+
+<pedi:numero_ID>65232132</pedi:numero_ID>
+
+<pedi:cod_articulo>CAJ1237</pedi:cod_articulo>
+
+<pedi:nombre_articulo>Caja de herramientas1</pedi:nombre_articulo>
+
+<pedi:precio>187,90</pedi:precio>
+
+</pedi:pedido>
+      
+      
+	<pedi:pedido>
+
+<pedi:numero_ID>65232133</pedi:numero_ID>
+
+<pedi:cod_articulo>CAJ1234</pedi:cod_articulo>
+
+<pedi:nombre_articulo>Caja de herramientas2</pedi:nombre_articulo>
+
+<pedi:precio>187,90</pedi:precio>
+
+</pedi:pedido>
+      
+    </clie:cliente>
+    
+</compras>

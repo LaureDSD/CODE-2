@@ -1,0 +1,15 @@
+<biblioteca>
+    <libro isbn="1" ano="123">
+        <titulo>abc</titulo>
+        <editorioal>abc</editorioal>
+        <autor>abc</autor>
+        <descripcion xml:lang="es">abc</descripcion>
+        <descripcion xml:lang="en">abc</descripcion>
+    </libro>
+    
+    <libro isbn="2" ano="123">
+        <titulo>abc</titulo>
+        <editorioal>abc</editorioal>
+        <autor>abc</autor>
+    </libro>
+</biblioteca>

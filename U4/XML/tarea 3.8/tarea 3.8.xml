@@ -1,0 +1,37 @@
+<!-- centro.xml -->
+<compras xmlns="http://www.iescentro.com/espazos/compras/" xmlns:ped="http://www.iescentro.com/espazos/pedido/" xmlns:cli="http://www.iescentro.com/espazos/cliente/">
+  <cli:cliente>
+    <cli:numero_ID>1232654</cli:numero_ID>
+    <cli:nombre>Fulanito de tal</cli:nombre>
+    <cli:telefono>999999999</cli:telefono>
+    <ped:pedido>
+		<ped:numero_ID>6523213</ped:numero_ID>
+		<ped:cod_articulo>CAJ123</ped:cod_articulo>
+		<ped:nombre_articulo>Caja de herramientas</ped:nombre_articulo>
+		<ped:precio>187,90</ped:precio>
+	</ped:pedido>
+	<ped:pedido>
+		<ped:numero_ID>6523214</ped:numero_ID>
+		<ped:cod_articulo>CAJ124</ped:cod_articulo>
+		<ped:nombre_articulo>Pala Bellota</ped:nombre_articulo>
+		<ped:precio>37,90</ped:precio>
+	</ped:pedido>
+    </cli:cliente>
+	<cli:cliente>
+    <cli:numero_ID>1232655</cli:numero_ID>
+    <cli:nombre>Fulanito de cual</cli:nombre>
+    <cli:telefono>888888888</cli:telefono>
+    <ped:pedido>
+		<ped:numero_ID>6523215</ped:numero_ID>
+		<ped:cod_articulo>CAJ125</ped:cod_articulo>
+		<ped:nombre_articulo>Alambre de Espino</ped:nombre_articulo>
+		<ped:precio>52,90</ped:precio>
+	</ped:pedido>
+	<ped:pedido>
+		<ped:numero_ID>6523216</ped:numero_ID>
+		<ped:cod_articulo>CAJ126</ped:cod_articulo>
+		<ped:nombre_articulo>Lámpara jardín</ped:nombre_articulo>
+		<ped:precio>18,90</ped:precio>
+	</ped:pedido>
+    </cli:cliente>
+</compras>
